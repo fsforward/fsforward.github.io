@@ -141,6 +141,17 @@ main {
   margin: auto;
 }
 
+table {
+  border: 1px solid green;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid green;
+  text-align: left;
+  padding: 8px;
+}
+
 .backbtn {
   background-color: #ada397;
   text-decoration: none;
