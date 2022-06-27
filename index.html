@@ -1,14 +1,133 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>W.I.P - fsForward</title>
-    </head>
-    <body>
-        <p>
-            Sorry! This website has been taken down...<br><br>
+        <title>Home page, Company information - fsForward</title>
+        <link rel="icon" type="image/x-icon" href="https://fsforward.github.io/IMAGES/WebsiteLogo.png">
+        <meta name="description" content="The company consists out of 3 parts. Game development, Texture development, And music producing. All together will bring new fresh games on the market.">
+        <meta name="language" content="english">
 
-            Why? Because... This website is in the process of updating to website: V4.0.0!<br>
-            (Somewhere in between 2 weeks the site is back online)
-        </p>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="JS/Responsive.js"></script>
+        <script type="text/javascript" src="JS/Dropdown.js"></script>
+        <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body style="background: linear-gradient(#8EB5F0, #97DFFC, #97DFFC, #8EB5F0) no-repeat; background-attachment: fixed;">
+        <header>
+            <nav>
+                <div class="topnav" id="myTopnav">
+                    <a href="index.html" class="logo">fsForward</a>
+
+                    <div class="dropdown">
+                        <button onclick="dropdownFunction()" class="dropbtn">GAMES <i class="fa fa-caret-down"></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="HTML/GAMES/MINIGAMES/MiniGames.html">Mini Games</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown1">
+                        <button onclick="dropdownFunction1()" class="dropbtn1">APPS <i class="fa fa-caret-down"></i></button>
+                        <div id="myDropdown1" class="dropdown-content1">
+                            <a href="#">Executables</a>
+                            <a href="#">CSharps</a>
+                        </div>
+                    </div> 
+                    
+                    <div class="dropdown2">
+                        <button onclick="dropdownFunction2()" class="dropbtn2">MINECRAFT <i class="fa fa-caret-down"></i></button>
+                        <div id="myDropdown2" class="dropdown-content2">
+                            <a href="#">Mods</a>
+                            <a href="#">Texture Packs</a>
+                            <a href="#">Language Packs</a>
+                            <a href="#">Worlds</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown3">
+                        <button onclick="dropdownFunction3()" class="dropbtn3">NEWS <i class="fa fa-caret-down"></i></button>
+                        <div id="myDropdown3" class="dropdown-content3">
+                            <a href="#">Updates</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown4">
+                        <button onclick="dropdownFunction4()" class="dropbtn4">SUPPORT <i class="fa fa-caret-down"></i></button>
+                        <div id="myDropdown4" class="dropdown-content4">
+                            <a href="HTML/INFORMATION/About.html">About</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div> 
+                    <a class="icon" onclick="responsiveFunction()">&#9776;</a>
+                </div>
+            </nav>
+        </header>
+        <main class="centerText">
+            <h1 style="display: inline; color: #3C096C;">Home page</h1><br>
+            <h5 style="display: inline; color: #7B2CBF;">Website :V4.0.0</h5>
+            <hr style="width: 50%; color: #10002B;">
+            <h2 style="display: inline; color: #7B2CBF;">Company information</h2><br>
+
+            <p style="display: inline;">The company consists out of 3 parts.</p><br>
+            <p style="display: inline;">Game development, Texture development, And music producing.</p><br>
+            <p style="display: inline;">All together will bring new fresh games on the market.</p><br><br>
+
+            <h3 style="display: inline; color: #7B2CBF;">The fsForward company</h3>
+
+            <table style="margin: 10px auto;">
+                <tr style="color: #3C096C;">
+                    <th>Game developers</th>
+                    <th>Texture creaters</th>
+                    <th>Music producers</th>
+                </tr>
+                <tr>
+                    <td><a href="https://www.instagram.com/fsforward/" target="_blank">Tycho</a></td>
+                    <td><a href="https://www.instagram.com/fsforward/" target="_blank">Tycho</a></td>
+                    <td><a href="https://www.instagram.com/fsforward/" target="_blank">Tycho</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Akage</td>
+                    <td><a href="https://www.youtube.com/c/ALBSTREWMUSIC" target="_blank">Albstrew</a></td>
+                </tr>
+                </table> 
+
+                <h3 style="display: inline; color: #7B2CBF;">Game testers</h3>
+
+                <table style="margin: 10px auto;">
+                <tr style="color: #3C096C;">
+                    <th>Android</th>
+                    <th>Pc</th>
+                    <th>Linux</th>
+                </tr>
+                <tr>
+                    <td><a href="https://www.instagram.com/fsforward/" target="_blank">Tycho</a></td>
+                    <td><a href="https://www.instagram.com/fsforward/" target="_blank">Tycho</a></td>
+                    <td><a href="https://www.instagram.com/fsforward/" target="_blank">Tycho</a></td>
+                </tr>
+                <tr>
+                    <td>赤毛 (Akage)</td>
+                    <td>赤毛 (Akage)</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.youtube.com/c/ALBSTREWMUSIC" target="_blank">Albstrew</a></td>
+                    <td><a href="https://www.youtube.com/c/ALBSTREWMUSIC" target="_blank">Albstrew</a></td>
+                </tr>
+                <tr>
+                    <td>Jordy</td>
+                    <td>Jordy</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Sandor</td>
+                </tr>
+                </table> 
+        </main>
+        <footer>
+            © Website by: <a style="color: #C77DFF; text-decoration: underline;" href="https://www.instagram.com/fsforward/">Tycho</a>
+        </footer>
     </body>
 </html>
