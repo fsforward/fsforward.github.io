@@ -1,0 +1,83 @@
+fsForward - Employment contract
+From out: The Netherlands
+
+Terms and agreements:
+
+---- Ownership of Work Products. ---- 
+
+As a result of this Agreement, the Service Provider will create specific Assignments, 
+which shall be referred to as “Work Products”.
+
+All Work Products are owned by the Service provider.
+You shall not maintain any rights to these Work Products,
+and you shall turn over all Work Products upon the termination of this Contract.
+
+
+
+---- Company Relationship. ---- 
+
+You agree that the Service Provider is providing the Services under this Contract and acting as an independent contractor and not as an employee.
+
+This Contract does not create a partnership, joint venture, or any other fiduciary relationship between you and the Company/Service Provider. 
+
+
+
+---- Confidentiality. ----
+
+During the course of this Contract, it will be necessary for you to share confidential information, to the Service Provider in order for the Service Provider to complete the Services.
+
+The Service Provider will not share any of this proprietary information at any time.
+The Service Provider also will not use any of this proprietary information for the Service Provider’s personal benefit at any time.
+
+This section remains in full force and effect even after termination of the Contract by it’s natural termination or the early termination by either Party.
+
+
+
+---- Termination. ----
+
+This Contract may be terminated at any time by either Party.
+
+If this contract does not terminate by its natural termination,
+then you will have to finish your unfinished work products within 14 days. 
+
+If not then you will be responsible for any work delay.
+And you shall discuss with the Service Provider about what happens next.
+
+
+
+---- Governing Law and Jurisdiction. ----
+
+You agree that this Contract shall be governed by the State and/or Country in which the company was founded.
+
+In the event that you are in a different State and/or Countrie, this Contract will still be governed by 
+the law of the Netherlands.
+
+
+
+---- Entire Agreement. ----
+
+You acknowledge and agree that this Contract represents the entire agreement between you and the Service Provider. 
+
+In the event that  you or the Service Provider desires to change, add, or otherwise modify any terms, that You/The Service Provider will discuss it with eachoter.
+
+
+
+You want to work in (Can pick more then 1):
+1. Game development
+2. Texture development
+3. Music producing
+4. Game Tester
+
+Answer: 
+
+
+
+Client:
+    Signature: 
+    First-Name: 
+    Date: 
+
+Service provider:
+    Signature: fsForward.
+    First-Name: Tycho
+    Date: 
