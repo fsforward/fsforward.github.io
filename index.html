@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home - fsForward</title>
+        <title>fsForward</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <link rel="icon" type="image/x-icon" href="https://fsforward.github.io/IMAGES/WebsiteLogo.png">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     </head>
     <body>
-        <section id="update-news">
-            <p>Latest update: 03/07/2022</p>
-        </section>
-
         <header>
-            <nav>
-                <div>
-                    <ul class="nav-ul">
-                        <li><a href="#">fsForward</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="nav-ul">
-                        <li class="fa fa-github socials"></li>
-                        <li class="fa fa-instagram fa-lg socials"></li>
-                        <li class="fa fa-youtube fa-lg socials"></li>
-                    </ul>
-                </div>
-            </nav>
+            <a class="logo" href="/index.html"><img src="/images/fsForwardLogoWhite.png" width="100px"></a>
+            <ul class="nav">
+                <li><a href="/index.html#home">Home</a></li>
+                <li><a href="/index.html#games">Games</a></li>
+                <li><a href="/index.html#about">About</a></li>
+            </ul>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
         </header>
 
-        <main>
-            <section>
-                <h1 id="page">Home</h1>
-                <hr>
-                <p>This website is not done yet...</p><br>
-                <p>But if you want to stay around here is a button!</p><br><br>
-                
-                <button id="incrementBtn">Click me</button><br>
-                <p id="counter"></p>
-            </section>
-        </main>
-        <script type="text/javascript" src="/js/app.js"></script>
+        <div id="home" class="banner">
+            <div class="bg">
+                <div class="content">
+                    <h2>
+                        Game fast<br>
+                        Game forward
+                    </h2>
+                    <p>
+                        Free Games, No Ads.<br>
+                        Platforms: Windows, Linux, Android.
+                    </p>
+                    <a class="btn" href="/index.html#games">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="games" class="games animeX">
+            <h2>Games</h2>
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="pc">Pc games</li>
+                <li class="list" data-filter="mobile">Mobile games</li>
+            </ul>
+            
+            <div class="cardBx">
+                <div class="card" data-item="pc">
+                    <img src="/images/BomberManThumbnail.png">
+                    <div class="content">
+                        <h4>Bomber Man | V1.0.0</h4>
+                        <div class="progress-line"><span></span></div>
+                        <div class="info">
+                            <p>Pricing<br><span>Free</span></p>
+                            <a href="#">Not available</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="about animeX">
+            <div class="contentBx">
+                <h2>About us</h2>
+                <p>
+                    WEBSITE IN PROGRESS.
+                </p>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="info">
+                <a href="/index.html" class="logo"><img src="/images/fsForwardLogoWhite.png" width="100px"></a>
+                <p><i class='bx bx-copyright'></i> 2022 All Rights Reserved</p>
+            </div>
+        </footer>
+        <script src="/app.js"></script>
     </body>
 </html>
