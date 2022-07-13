@@ -399,7 +399,7 @@ footer .info p {
         display: block;
         width: 30px;
         height: 30px;
-        background: url(/images/Open.png);
+        background: url(/images/buttons/Open.png);
         background-position: center;
         background-size: 30px;
         background-repeat: no-repeat;
@@ -409,7 +409,7 @@ footer .info p {
     }
 
     .toggleMenu.active {
-        background: url(/images/Close.png);
+        background: url(/images/buttons/Close.png);
         background-position: center;
         background-size: 30px;
         background-repeat: no-repeat;
