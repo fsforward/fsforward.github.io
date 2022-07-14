@@ -50,3 +50,11 @@ for (let i = 0; i < list.length; i++) {
         }
     });
 }
+
+var cards = document.querySelectorAll('.dwnld-btn');
+
+[...cards].forEach((card_)=>{
+    card_.addEventListener( 'click', function() {
+    card_.closest('.info-card').classList.toggle('is-flipped');
+  });
+});

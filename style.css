@@ -278,6 +278,7 @@ header .action .searchBx input {
 .dwnld-btn, .info-btn
 {
     color: white;
+    cursor: pointer;
 }
 
 .games .cardBx .card .content {
@@ -484,4 +485,40 @@ footer .info p {
     footer .info {
         flex-direction: column;
     }
+}
+
+.scene {
+    width: 280px;
+    height: 250px;
+}
+
+.info-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.info-card__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+  
+.info-card__face--back {
+    background-color: #35407e;
+    transform: rotateY( 180deg );
+}
+
+.info-card__face--back a{
+    background-color: #35407e;
+    transform: rotateY( 180deg );
+    color: white;
+    margin: 2px;
+}
+
+.info-card.is-flipped {
+    transform: rotateY(180deg);
 }
