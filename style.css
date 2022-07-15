@@ -522,3 +522,17 @@ footer .info p {
 .info-card.is-flipped {
     transform: rotateY(180deg);
 }
+
+.windows-section
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.android-section
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
