@@ -5,225 +5,180 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/style.css">
-        <link rel="icon" type="image/x-icon" href="/images/logos/Favicon.png">
+        <link rel="icon" type="image/x-icon" href="/images/logo/Favicon.png">
         <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <a class="logo" href="/index.html"><img src="/images/logos/fsForwardLogoWhite.png" alt="" width="100px"></a>
-            <ul class="nav">
-                <li><a href="/index.html#home">Home</a></li>
-                <li><a href="/index.html#games">Games</a></li>
-                <li><a href="/index.html#about">About</a></li>
-            </ul>
-            <div class="toggleMenu" onclick="toggleMenu();"></div>
+            <nav>
+                <div class="logo-holder">
+                    <img class="logo" src="/images/logo/fsForwardLogoBlack.png" alt="" width="100px" />
+                </div>
+                <div class="content-holder">
+                    <div class="links-holder">
+                        <!-- <a href="#">Games</a>
+                        <a href="#">Mods</a> -->
+                    </div>
+                    <div class="info-holder">
+                        <!-- <a href="#archive"><i class='bx bx-sm bx-archive'></i></a> -->
+                        <a href="#information"><i class="bx bx-sm bx-info-circle"></i></a>
+                        <!-- <a target="_blank" href="https://www.buymeacoffee.com/fsforward"><i class='bx bx-sm bx-coffee' ></i></a> -->
+                        
+                        <div id="information" class="overlay">
+                            <div class="popup">
+                                <h2>About</h2>
+                                <a class="close" href="#">&times;</a>
+                                <div class="content">
+                                    <br />
+                                    <h4>Pc games</h4>
+                                    <p>
+                                        Pc games come with Launchers.<br />
+                                        These Launchers will install the game/updates automatically for you.<br />
+                                        There is also a possibility that these launchers will be detected as Viruse's.<br />
+                                        This is because i am not paying $500 every year to mark them as save.
+                                    </p>
+                                    <br />
+                                    <h4>Android games</h4>
+                                    <p>
+                                        If an android game is on the Playstore you will be redirected to the Playstore.<br />
+                                        If an android game is not on the Playstore then you will download a .apk file.
+                                    </p>
+                                    <br />
+                                    <h4>Files</h4>
+                                    <p>
+                                        All files are 100% save.<br />
+                                        I am not collecting any user data.
+                                    </p>
+                                    <br />
+                                    <h3 style="color: red;">DISCLAIMER</h3>
+                                    <p>
+                                        Files are only guaranteed safe to download from <a href="fsforward.com">fsforward.com</a>.<br />
+                                        If you have installed any of these files from another website,<br />
+                                        than please know that I am not responsible for any potential harm to your device.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="archive" class="overlay">
+                            <div class="popup">
+                                <h2>Archive</h2>
+                                <a class="close" href="#">&times;</a>
+                                <div class="content">
+                                    <br />
+                                    <h4>Pc games</h4>
+                                    <p>
+                                        <ul>
+                                            2D Shooter
+                                            <li><a href="#">V1.0.0</a></li>
+                                            <br />
+
+                                            Bomber Man
+                                            <li>
+                                                <a href="#">V1.2.0</a>
+                                                <a href="#">V1.1.0</a>
+                                                <a href="#">V1.0.1</a>
+                                                <a href="#">V1.0.0</a>
+                                            </li>
+                                            <br />
+
+                                            Candy Catch
+                                            <li><a href="#">V1.0.0</a></li>
+                                        </ul>
+                                    </p>
+                                    <br />
+                                    <h4>Android games</h4>
+                                    <p>
+                                        <ul>
+                                            2D Shooter
+                                            <li><a href="#">V1.0.0</a></li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
-
-        <div id="home" class="banner">
-            <div class="bg">
-                <div class="content">
-                    <h2>
-                        Game fast<br>
-                        Game forward
-                    </h2>
-                    <p>
-                        Free Games, No Ads.<br>
-                        Platforms: Windows & Android.
-                    </p>
-                    <a class="btn" href="/index.html#games">Explore</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="games" class="games animeX">
-            <h2>Games</h2>
-            <ul>
-                <li class="list active" data-filter="all">All</li>
-                <li class="list" data-filter="pc/mobile">Pc/Mobile Games</li>
-                <li class="list" data-filter="pc">Pc Games</li>
-                <li class="list" data-filter="mobile">Mobile Games</li>
-            </ul>
+        <main>
+            <p style="text-align: center;">No games here, yet...</p>
             
-            <div class="cardBx">
-                <div class="card" data-item="pc/mobile">
-                    <div class="container">
-                        <div class="scene">
-                            <div class="info-card">
-                              <div class="info-card__face info-card__face--front">
-                                <img src="/images/games/2d-shooter/2DShooterThumbnail.png" alt="">
-                                <a class="info-btn" target="_blank" href="/games/2d-shooter/2D Shooter Documentation.html"><i class='bx bx-info-circle'></i></a>
-                                <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
-                              </div>
-                              <div class="info-card__face info-card__face--back">
-                                <div class="windows-section">
-                                    <i class='bx bxl-windows'></i><br>
-                                    <a href="/games/2d-shooter/archive/v1.0.0/2D Shooter.zip" download="2D Shooter V1.0.0.zip">V1.0.0</a>
-                                </div>
-                                <div class="android-section">
-                                    <i class='bx bxl-android'></i><br>
-                                    <a href="/games/2d-shooter/archive/v1.0.0/2D Shooter V1.0.0.apk" download="2D Shooter V1.0.0.apk">V1.0.0</a>
-                                </div>
-                                <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h4>2D Shooter</h4>
-                        <div class="progress-line"><span class="available"></span></div>
-                        <div class="info">
-                            <p>Pricing<br><span>Free</span></p>
-                            <a class="a-btn-2" href="/games/2d-shooter/2D Shooter Launcher.exe" download="2D Shooter Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
-                            <a class="a-btn-2" href="/games/2d-shooter/2D Shooter V1.0.0.apk" download="2D Shooter V1.0.0.apk"><i class='bx bxl-android'></i> Play Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" data-item="pc">
-                    <div class="container">
-                        <div class="scene">
-                            <div class="info-card">
-                              <div class="info-card__face">
-                                <img src="/images/games/bomber-man/BomberManThumbnail.png" alt="">
-                                <a class="info-btn" target="_blank" href="/games/bomber-man/Bomber Man Documentation.html"><i class='bx bx-info-circle'></i></a>
-                                <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
-                                </div>
-                                <div class="info-card__face info-card__face--back">
-                                    <div class="windows-section">
-                                        <i class='bx bxl-windows'></i><br>
-                                        <a href="/games/bomber-man/archive/v1.2.0/Bomber Man.zip" download="Bomber Man V1.2.0.zip">V1.2.0</a>
-                                        <a href="/games/bomber-man/archive/v1.1.0/Bomber Man.zip" download="Bomber Man V1.1.0.zip">V1.1.0</a>
-                                        <a href="/games/bomber-man/archive/v1.0.1/Bomber Man.zip" download="Bomber Man V1.0.1.zip">V1.0.1</a>
-                                        <a href="/games/bomber-man/archive/v1.0.0/Bomber Man.zip" download="Bomber Man V1.0.0.zip">V1.0.0</a>
+            <!-- <div id="games" class="games">
+                <h2>Games</h2>
+                <ul>
+                    <li class="list active" data-filter="all">All</li>
+                    <li class="list" data-filter="pc/mobile">Pc/Mobile Games</li>
+                    <li class="list" data-filter="pc">Pc Games</li>
+                    <li class="list" data-filter="mobile">Mobile Games</li>
+                </ul>
+                <div class="cardBx">
+                    <div class="card" data-item="pc/mobile">
+                        <div class="container">
+                            <div class="scene">
+                                <div class="info-card">
+                                    <div class="info-card__face info-card__face--front">
+                                        <img src="/images/games/2d-shooter/2DShooterThumbnail.png" alt="">
+                                        <a class="info-btn" target="_blank" href="/games/2d-shooter/2D Shooter Documentation.html"><i class='bx bx-info-circle'></i></a>
                                     </div>
-                                    <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
                                 </div>
                             </div>
-                          </div>
-                    </div>
-                    <div class="content">
-                        <h4>Bomber Man</h4>
-                        <div class="progress-line"><span class="available"></span></div>
-                        <div class="info">
-                            <p>Pricing<br><span>Free</span></p>
-                            <a href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
+                        </div>
+                        <div class="content">
+                            <h4>2D Shooter</h4>
+                            <div class="progress-line"><span class="available"></span></div>
+                            <div class="info">
+                                <p>Pricing<br><span>Free</span></p>
+                                <a class="a-btn-2" href="/games/2d-shooter/2D Shooter Launcher.exe" download="2D Shooter Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
+                                <a class="a-btn-2" href="/games/2d-shooter/2D Shooter V1.0.0.apk" download="2D Shooter V1.0.0.apk"><i class='bx bxl-android'></i> Play Now</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card" data-item="pc">
-                    <div class="container">
-                        <div class="scene">
-                            <div class="info-card">
-                              <div class="info-card__face">
-                                <img src="/images/games/candy-catch/CandyCatchThumbnail.png" alt="">
-                                <a class="info-btn" target="_blank" href="/games/candy-catch/Candy Catch Documentation.html"><i class='bx bx-info-circle'></i></a>
-                                <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
-                                </div>
-                                <div class="info-card__face info-card__face--back">
-                                    <div class="windows-section">
-                                        <i class='bx bxl-windows'></i><br>
-                                        <a href="/games/candy-catch/archive/v1.0.0/Candy Catch.zip" download="Candy Catch V1.0.0.zip">V1.0.0</a>
+                    <div class="card" data-item="pc">
+                        <div class="container">
+                            <div class="scene">
+                                <div class="info-card">
+                                    <div class="info-card__face info-card__face--front">
+                                        <img src="/images/games/bomber-man/BomberManThumbnail.png" alt="">
+                                        <a class="info-btn" target="_blank" href="/games/bomber-man/Bomber Man Documentation.html"><i class='bx bx-info-circle'></i></a>
                                     </div>
-                                    <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
                                 </div>
                             </div>
-                          </div>
-                    </div>
-                    <div class="content">
-                        <h4>Candy Catch</h4>
-                        <div class="progress-line"><span class="available"></span></div>
-                        <div class="info">
-                            <p>Pricing<br><span>Free</span></p>
-                            <a href="/games/candy-catch/Candy Catch Launcher.exe" download="Candy Catch Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
+                        </div>
+                        <div class="content">
+                            <h4>Bomber Man</h4>
+                            <div class="progress-line"><span class="available"></span></div>
+                            <div class="info">
+                                <p>Pricing<br><span>Free</span></p>
+                                <a class="a-btn" href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!--
-                <div class="card" data-item="mobile">
-                    <div class="container">
-                        <div class="scene">
-                            <div class="info-card">
-                              <div class="info-card__face">
-                                <img src="/images/games/delivery-driver/DeliveryDriverThumbnail.png" alt="">
-                                <span class="info-btn"><i class='bx bx-info-circle'></i></span>
-                                <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
-                                </div>
-                                <div class="info-card__face info-card__face--back">
-                                    <div class="android-section">
-                                        <i class='bx bxl-android'></i><br>
-                                        <a href="#" download="#">V1.0.0</a>
+                    <div class="card" data-item="pc">
+                        <div class="container">
+                            <div class="scene">
+                                <div class="info-card">
+                                    <div class="info-card__face info-card__face--front">
+                                        <img src="/images/games/candy-catch/CandyCatchThumbnail.png" alt="">
+                                        <a class="info-btn" target="_blank" href="/games/candy-catch/Candy Catch Documentation.html"><i class='bx bx-info-circle'></i></a>
                                     </div>
-                                    <span class="dwnld-btn"><i class='bx bx-cloud-download'></i></span>
                                 </div>
                             </div>
-                          </div>
-                    </div>
-                    <div class="content">
-                        <h4>Coming Soon</h4>
-                        <div class="progress-line"><span class="unavailable"></span></div>
-                        <div class="info">
-                            <p>Pricing<br><span>Free</span></p>
-                            <a href="#" download="#"><i class='bx bxl-android'></i> Play Now</a>
+                        </div>
+                        <div class="content">
+                            <h4>Candy Catch</h4>
+                            <div class="progress-line"><span class="available"></span></div>
+                            <div class="info">
+                                <p>Pricing<br><span>Free</span></p>
+                                <a class="a-btn" href="/games/candy-catch/Candy Catch Launcher.exe" download="Candy Catch Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
+                            </div>
                         </div>
                     </div>
-                </div> -->
-            </div>
-        </div>
 
-        <div id="about" class="about animeX">
-            <div class="contentBx">
-                <h2>About</h2>
-                <p style="color: lightgreen;">About me:</p>
-                <p>
-                    I am a solo game developer uploading games to this website for you to enjoy.<br>
-                    I hope you enjoy the games as much as i enjoy offering them to you.
-                </p>
-                <br>
-                <p>
-                    I do not have a Gaming pc/Laptop, so most of the games are 2D.<br>
-                    I make games in a Game Engine called Unity.<br>
-                    The programming language i use is C#.
-                </p>
-                <br>
-                <p style="color: lightgreen;">About downloadables:</p>
-                <p>
-                    Most android games are downloadable from the PlayStore.<br>
-                    If not, the files are simple .apk's.<br><br>
-
-                    I am better at making games on pc so thats why there are more games for pc.<br>
-                    Pc games come with launchers (.exe). These launchers will automatically download and install updates.<br>
-                    So you dont have to struggle with .zip files.
-                </p>
-                <br>
-                <p style="color: red;">NOTE:</p>
-                <p>
-                    Game Launchers get detected as Trojan Viruses on windows and other virus detectors.<br>
-                    This is because i cant afford a certfication for the launchers.<br>
-                    I do not want to pay $500 every year just to mark files as safe.<br>
-                    I hope you understand that.
-                </p>
-                <br>
-                <p>
-                    If your windows device is not detecting it as a virus<br>
-                    Then its a possibility that alot of people have downloaded and trusted the files.<br>
-                    If thats the case, Thank you for downloading my games/trusting me.
-                </p>
-                <br>
-                <p>
-                    For questions or bug/glitch reports, you can contact me.
-                </p>
-                <a href="mailto: fsforward@hotmail.com">Contact</a>
-            </div>
-        </div>
-
-        <footer>
-            <div class="info">
-                <a href="/index.html" class="logo"><img src="/images/logos/fsForwardLogoWhite.png" alt="" width="100px"></a>
-                <p><i class='bx bx-copyright'></i> 2022 All Rights Reserved</p>
-            </div>
-        </footer>
+                </div>
+            </div> -->
+        </main>
         <script src="/app.js"></script>
     </body>
 </html>

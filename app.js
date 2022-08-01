@@ -3,30 +3,6 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-function toggleMenu() {
-    const header = document.querySelector(".toggleMenu");
-    const nav = document.querySelector(".nav");
-    header.classList.toggle("active");
-    nav.classList.toggle("active");
-}
-
-window.addEventListener("scroll", function() {
-    var anime = document.querySelectorAll(".animeX");
-    
-    for (var s = 0; s < anime.length; s++) {
-        var windowheight = window.innerHeight;
-        var animetop = anime[s].getBoundingClientRect().top;
-        var animepoint = 150;
-
-        if (animetop < windowheight - animepoint) {
-            anime[s].classList.add("active");
-        }
-        else {
-            anime[s].classList.remove("active");
-        }
-    }
-});
-
 let list = document.querySelectorAll(".list");
 let card = document.querySelectorAll(".card");
 
@@ -50,11 +26,3 @@ for (let i = 0; i < list.length; i++) {
         }
     });
 }
-
-var cards = document.querySelectorAll('.dwnld-btn');
-
-[...cards].forEach((card_)=>{
-    card_.addEventListener( 'click', function() {
-    card_.closest('.info-card').classList.toggle('is-flipped');
-  });
-});
