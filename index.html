@@ -20,7 +20,7 @@
                         <a href="#">Mods</a> -->
                     </div>
                     <div class="info-holder">
-                        <!-- <a href="#archive"><i class='bx bx-sm bx-archive'></i></a> -->
+                        <a href="#archive"><i class='bx bx-sm bx-archive'></i></a>
                         <a href="#information"><i class="bx bx-sm bx-info-circle"></i></a>
                         <!-- <a target="_blank" href="https://www.buymeacoffee.com/fsforward"><i class='bx bx-sm bx-coffee' ></i></a> -->
                         
@@ -68,29 +68,13 @@
                                     <h4>Pc games</h4>
                                     <p>
                                         <ul>
-                                            2D Shooter
-                                            <li><a href="#">V1.0.0</a></li>
-                                            <br />
-
                                             Bomber Man
                                             <li>
-                                                <a href="#">V1.2.0</a>
-                                                <a href="#">V1.1.0</a>
-                                                <a href="#">V1.0.1</a>
-                                                <a href="#">V1.0.0</a>
+                                                <a href="/games/bomber-man/archive/v1.2.0/Bomber Man.zip" download="Bomber Man V1.2.0.zip">V1.2.0</a>
+                                                <a href="/games/bomber-man/archive/v1.1.0/Bomber Man.zip" download="Bomber Man V1.1.0.zip">V1.1.0</a>
+                                                <a href="/games/bomber-man/archive/v1.0.1/Bomber Man.zip" ownload="Bomber Man V1.0.1.zip">V1.0.1</a>
+                                                <a href="/games/bomber-man/archive/v1.0.0/Bomber Man.zip" ownload="Bomber Man V1.0.0.zip">V1.0.0</a>
                                             </li>
-                                            <br />
-
-                                            Candy Catch
-                                            <li><a href="#">V1.0.0</a></li>
-                                        </ul>
-                                    </p>
-                                    <br />
-                                    <h4>Android games</h4>
-                                    <p>
-                                        <ul>
-                                            2D Shooter
-                                            <li><a href="#">V1.0.0</a></li>
                                         </ul>
                                     </p>
                                 </div>
@@ -101,38 +85,17 @@
             </nav>
         </header>
         <main>
-            <p style="text-align: center;">No games here, yet...</p>
+            <!-- <p style="text-align: center;">No games here, yet...</p> -->
             
-            <!-- <div id="games" class="games">
+            <div id="games" class="games">
                 <h2>Games</h2>
                 <ul>
                     <li class="list active" data-filter="all">All</li>
-                    <li class="list" data-filter="pc/mobile">Pc/Mobile Games</li>
+                    <!-- <li class="list" data-filter="pc/mobile">Pc/Mobile Games</li> -->
                     <li class="list" data-filter="pc">Pc Games</li>
-                    <li class="list" data-filter="mobile">Mobile Games</li>
+                    <!-- <li class="list" data-filter="mobile">Mobile Games</li> -->
                 </ul>
                 <div class="cardBx">
-                    <div class="card" data-item="pc/mobile">
-                        <div class="container">
-                            <div class="scene">
-                                <div class="info-card">
-                                    <div class="info-card__face info-card__face--front">
-                                        <img src="/images/games/2d-shooter/2DShooterThumbnail.png" alt="">
-                                        <a class="info-btn" target="_blank" href="/games/2d-shooter/2D Shooter Documentation.html"><i class='bx bx-info-circle'></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h4>2D Shooter</h4>
-                            <div class="progress-line"><span class="available"></span></div>
-                            <div class="info">
-                                <p>Pricing<br><span>Free</span></p>
-                                <a class="a-btn-2" href="/games/2d-shooter/2D Shooter Launcher.exe" download="2D Shooter Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
-                                <a class="a-btn-2" href="/games/2d-shooter/2D Shooter V1.0.0.apk" download="2D Shooter V1.0.0.apk"><i class='bx bxl-android'></i> Play Now</a>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="card" data-item="pc">
                         <div class="container">
@@ -150,34 +113,40 @@
                             <div class="progress-line"><span class="available"></span></div>
                             <div class="info">
                                 <p>Pricing<br><span>Free</span></p>
-                                <a class="a-btn" href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
+                                <a href="#bomberman" download="Bomber Man Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="card" data-item="pc">
-                        <div class="container">
-                            <div class="scene">
-                                <div class="info-card">
-                                    <div class="info-card__face info-card__face--front">
-                                        <img src="/images/games/candy-catch/CandyCatchThumbnail.png" alt="">
-                                        <a class="info-btn" target="_blank" href="/games/candy-catch/Candy Catch Documentation.html"><i class='bx bx-info-circle'></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h4>Candy Catch</h4>
-                            <div class="progress-line"><span class="available"></span></div>
-                            <div class="info">
-                                <p>Pricing<br><span>Free</span></p>
-                                <a class="a-btn" href="/games/candy-catch/Candy Catch Launcher.exe" download="Candy Catch Launcher.exe"><i class='bx bxl-windows'></i> Play Now</a>
+                    <div id="bomberman" class="overlay">
+                        <div class="popup">
+                            <h2>Bomber Man</h2>
+                            <a class="close" href="#">&times;</a>
+                            <div class="content">
+                                <br />
+                                <a class="a-btn" href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-windows'></i> Download Now</a>
+                                <br />
+                                <br />
+                                <h4>About</h4>
+                                <p>
+                                    It started raining bomb's from out the sky!<br />
+                                    Dodge the bombs to stay alive.<br />
+                                    The more bomb's you dodge the more score you gain.
+                                </p>
+                                <br />
+                                <h4>Information</h4>
+                                <p>
+                                    Made by: fsForward<br />
+                                    Latest version: V1.2.0<br />
+                                    Latest update: 18/07/2022<br />
+                                    Platform: Windows<br />
+                                    Perspective: 2D
+                                </p>
                             </div>
                         </div>
                     </div>
 
                 </div>
-            </div> -->
+            </div>
         </main>
         <script src="/app.js"></script>
     </body>

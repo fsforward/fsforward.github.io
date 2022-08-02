@@ -75,6 +75,7 @@ body header nav div.content-holder div.links-holder a:hover { color: red }
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 1000;
   }
   .overlay:target {
     visibility: visible;
@@ -120,7 +121,6 @@ body header nav div.content-holder div.links-holder a:hover { color: red }
 
 .games {
     padding: 20px 25px 0 25px;
-    width: 100%;
     min-height: 100vh;
     display: flex;
     /* justify-content: center; */
@@ -220,7 +220,7 @@ body header nav div.content-holder div.links-holder a:hover { color: red }
     position: relative;
     height: 10px;
     width: 100%;
-    background-color: #fff;
+    background-color: #000;
     margin-bottom: 15px;
     border-radius: 10px;
     transform: scaleX(0);
@@ -285,6 +285,25 @@ body header nav div.content-holder div.links-holder a:hover { color: red }
     border-radius: 5px;
     color: black;
     letter-spacing: 1px;
+}
+
+.a-btn {
+    display: inline;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: solid 1px #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.a-btn:hover {
+    background-color: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
 }
 
 .a-btn-2
