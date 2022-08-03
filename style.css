@@ -175,6 +175,7 @@ body header nav div.content-holder div.links-holder a:hover { color: red }
     margin: 20px 40px;
     overflow: hidden;
     border: 1px solid black;
+    background-color: #fff;
 }
 
 .games .cardBx .card div img {
