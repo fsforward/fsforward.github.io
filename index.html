@@ -1,306 +1,665 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>fsForward</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/style.css">
-        <link rel="icon" type="image/x-icon" href="/images/logo/Favicon.png">
-        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="logo-holder">
-                    <img class="logo" src="/images/logo/fsForwardLogoBlack.png" alt="" width="100px" />
-                </div>
-                <div class="content-holder">
-                    <div class="links-holder">
-                        <!-- <a href="#">Games</a>
-                        <a href="#">Mods</a> -->
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <title>fsForward</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Varela" rel="stylesheet">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="icon" type="image/x-icon" href="/images/logo/Favicon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Font Awesome core CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- Hero Section, Background Image change in css -->
+    <div id="top" class="hero background-overlay">
+    
+        <!-- Name & Description -->
+        <div class="hero-content">
+            <h1>fsForward</h1>
+            <p class="hero-job"><span>INDIE GAME DEVELOPMENT</span></p>
+            <p class="hero-job-desc">FREE GAMES &amp; MORE.</p>
+
+        </div><!-- /.hero-content -->
+
+        <div class="hero-arrow page-scroll home-arrow-down">
+            <a class="" href="#main"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+        </div><!-- /.hero-arrow -->
+
+    </div><!-- /.hero -->
+    <!-- End Hero -->
+
+    <!-- Header -->
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation" data-spy="affix">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-perfect-collapse" aria-expanded="false" >
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <!-- Name -->
+                    <div class="page-scroll site-logo">
+                        <a href="#top">fsForward</a>
                     </div>
-                    <div class="info-holder">
-                        <a href="#archive"><i class='bx bx-sm bx-archive'></i></a>
-                        <a href="#documentation"><i class='bx bx-sm bxs-file-doc'></i></a>
-                        <a href="#information"><i class="bx bx-sm bx-info-circle"></i></a>
-                        <!-- <a target="_blank" href="https://www.buymeacoffee.com/fsforward"><i class='bx bx-sm bx-coffee' ></i></a> -->
+
+                </div><!-- /.navbar-header -->
+
+                <div class="main-menu collapse navbar-collapse" id="portfolio-perfect-collapse">
+
+                    <!-- Navigation -->
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="page-scroll"><a href="#top">Home</a></li>
+                        <li class="page-scroll"><a href="#main">Main</a></li>
+                        <li class="page-scroll"><a href="#about">About</a></li>
+                        <li class="page-scroll"><a href="#counters">Counters</a></li>
+                        <li class="page-scroll"><a href="#team">Team</a></li>
                         
-                        <div id="information" class="overlay">
-                            <div class="popup">
-                                <h2>About</h2>
-                                <a class="close" href="#">&times;</a>
-                                <div class="content">
-                                    <br />
-                                    <h4>Pc games</h4>
-                                    <p>
-                                        Pc games come with Launchers.<br />
-                                        These Launchers will install the game/updates automatically for you.<br />
-                                        There is also a possibility that these launchers will be detected as Viruse's.<br />
-                                        This is because i am not paying $500 every year to mark them as save.
-                                    </p>
-                                    <br />
-                                    <h4>Android games</h4>
-                                    <p>
-                                        If an android game is on the Playstore you will be redirected to the Playstore.<br />
-                                        If an android game is not on the Playstore then you will download a .apk file.
-                                    </p>
-                                    <br />
-                                    <h4>Files</h4>
-                                    <p>
-                                        All files are 100% save.<br />
-                                        I am not collecting any user data.
-                                    </p>
-                                    <br />
-                                    <h3 style="color: red;">DISCLAIMER</h3>
-                                    <p>
-                                        Files are only guaranteed safe to download from <a href="https://fsforward.com">fsforward.com</a>.<br />
-                                        If you have installed any of these files from another website,<br />
-                                        than please know that I am not responsible for any potential harm to your device.
-                                    </p>
+                            <a style="margin-left: 20px;" href="#archive"><i class='bx bx-md bx-archive'></i></a>
+                            <a href="#documentation"><i class='bx bx-md bxs-file-doc'></i></a>
+                            <a href="#information"><i class="bx bx-md bx-info-circle"></i></a>
+                            <!-- <a target="_blank" href="https://www.buymeacoffee.com/fsforward"><i class='bx bx-sm bx-coffee' ></i></a> -->
+                        
+                    </ul><!-- /.navbar-nav -->
+
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav><!-- /.primary-navigation -->
+
+        <div id="information" class="overlay">
+            <div class="popup">
+                <h2>About</h2>
+                <a class="close" href="#main">&times;</a>
+                <div class="content">
+                    <br />
+                    <h4>Pc games</h4>
+                    <p>
+                        Pc games come with Launchers.<br />
+                        These Launchers will install the game/updates automatically for you.<br />
+                        There is also a possibility that these launchers will be detected as Viruse's.<br />
+                        This is because i am not paying $500 every year to mark them as save.
+                    </p>
+                    <br />
+                    <h4>Android games</h4>
+                    <p>
+                        If an android game is on the Playstore you will be redirected to the Playstore.<br />
+                        If an android game is not on the Playstore then you will download a .apk file.
+                    </p>
+                    <br />
+                    <h4>Files</h4>
+                    <p>
+                        All files are 100% save.<br />
+                        I am not collecting any user data.
+                    </p>
+                    <br />
+                    <h3 style="color: red;">DISCLAIMER</h3>
+                    <p>
+                        Files are only guaranteed safe to download from <a href="https://fsforward.com">fsforward.com</a>.<br />
+                        If you have installed any of these files from another website,<br />
+                        than please know that I am not responsible for any potential harm to your device.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="archive" class="overlay">
+            <div class="popup">
+                <h2>Archive</h2>
+                <a class="close" href="#main">&times;</a>
+                <div class="content">
+                    <br />
+                    <h4 style="color: red;">Pc</h4>
+                    <p>
+                        <ul>
+                            Bomber Man
+                            <li>
+                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.2.0/Bomber Man.zip" download="Bomber Man V1.2.0.zip">V1.2.0</a> -
+                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.1.0/Bomber Man.zip" download="Bomber Man V1.1.0.zip">V1.1.0</a> -
+                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.0.1/Bomber Man.zip" ownload="Bomber Man V1.0.1.zip">V1.0.1</a> -
+                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.0.0/Bomber Man.zip" ownload="Bomber Man V1.0.0.zip">V1.0.0</a> 
+                            </li>
+                            <br>
+                            Calculator
+                            <li>
+                                <a href="/downloads/projects/2022/calculator/archive/v1.6.0/Calculator.zip" download="Calculator V1.6.0.zip">V1.6.0</a> -
+                                <a href="/downloads/projects/2022/calculator/archive/v1.5.0/Calculator.zip" download="Calculator V1.5.0.zip">V1.5.0</a> -
+                                <a href="/downloads/projects/2022/calculator/archive/v1.4.0/Calculator.zip" download="Calculator V1.4.0.zip">V1.4.0</a> -
+                                <a href="/downloads/projects/2022/calculator/archive/v1.3.0/Calculator.zip" download="Calculator V1.3.0.zip">V1.3.0</a> -
+                                <a href="/downloads/projects/2022/calculator/archive/v1.2.0/Calculator.zip" download="Calculator V1.2.0.zip">V1.2.0</a> -
+                                <a href="/downloads/projects/2022/calculator/archive/v1.1.0/Calculator.zip" download="Calculator V1.1.0.zip">V1.1.0</a> -
+                                <a href="/downloads/projects/2022/calculator/archive/v1.0.0/Calculator.zip" download="Calculator V1.0.0.zip">V1.0.0</a>
+                            </li>
+                        </ul>
+                    </p>
+                    <br />
+                    <h4 style="color: red;">Android</h4>
+                    <p>
+                        <ul>
+                            Stack It Up
+                            <li>
+                                <a href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.1.0/Stack It Up.apk" download="Stack It Up V1.1.0.apk">V1.1.0</a> -
+                                <a href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.0.0/Stack It Up.apk" download="Stack It Up V1.0.0.apk">V1.0.0</a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="documentation" class="overlay">
+            <div class="popup">
+                <h2>Documentation archive</h2>
+                <a class="close" href="#main">&times;</a>
+                <div class="content">
+                    <br />
+                    <h4 style="color: red;">Android</h4>
+                    <p>
+                        <ul>
+                            Stack It Up
+                            <li>
+                                <a target="_blank" href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.1.0/Stack It Up Documentation.txt">V1.1.0</a> -
+                                <a target="_blank" href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.0.0/Stack It Up Documentation.txt">V1.0.0</a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header><!-- /#header -->
+    <!-- End Header -->
+
+    <!-- Main content -->
+    <main class="site-main">
+        <div>
+            <p id="main">.</p>
+        </div>
+        <div class="games">
+            <h2>Games - Projects</h2>
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <!-- <li class="list" data-filter="pc/mobile">Pc/Mobile Games</li> -->
+                <li class="list" data-filter="pc">Pc</li>
+                <li class="list" data-filter="mobile">Mobile</li>
+            </ul>
+            <div class="cardBx">
+
+                <div class="card" data-item="pc">
+                    <div class="containere">
+                        <div class="scene">
+                            <div class="info-card">
+                                <div class="info-card__face info-card__face--front">
+                                    <img src="/images/games/2d/2022/windows/bomber-man/BomberManThumbnail.png" alt="">
+                                    <!-- <a class="info-btn" target="_blank" href="/games/bomber-man/Bomber Man Documentation.html"><i class='bx bx-info-circle'></i></a> -->
+                                    <!-- <p class="new"><b>NEW</b></p> -->
                                 </div>
                             </div>
                         </div>
-                        <div id="archive" class="overlay">
-                            <div class="popup">
-                                <h2>Archive</h2>
-                                <a class="close" href="#">&times;</a>
-                                <div class="content">
-                                    <br />
-                                    <h4>Pc</h4>
-                                    <p>
-                                        <ul>
-                                            Bomber Man
-                                            <li>
-                                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.2.0/Bomber Man.zip" download="Bomber Man V1.2.0.zip">V1.2.0</a>
-                                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.1.0/Bomber Man.zip" download="Bomber Man V1.1.0.zip">V1.1.0</a>
-                                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.0.1/Bomber Man.zip" ownload="Bomber Man V1.0.1.zip">V1.0.1</a>
-                                                <a href="/downloads/games/2d/2022/windows/bomber-man/archive/v1.0.0/Bomber Man.zip" ownload="Bomber Man V1.0.0.zip">V1.0.0</a>
-                                            </li>
-                                            <br>
-                                            Calculator
-                                            <li>
-                                                <a href="/downloads/projects/2022/calculator/archive/v1.6.0/Calculator.zip" download="Calculator V1.6.0.zip">V1.6.0</a>
-                                                <a href="/downloads/projects/2022/calculator/archive/v1.5.0/Calculator.zip" download="Calculator V1.5.0.zip">V1.5.0</a>
-                                                <a href="/downloads/projects/2022/calculator/archive/v1.4.0/Calculator.zip" download="Calculator V1.4.0.zip">V1.4.0</a>
-                                                <a href="/downloads/projects/2022/calculator/archive/v1.3.0/Calculator.zip" download="Calculator V1.3.0.zip">V1.3.0</a>
-                                                <a href="/downloads/projects/2022/calculator/archive/v1.2.0/Calculator.zip" download="Calculator V1.2.0.zip">V1.2.0</a>
-                                                <a href="/downloads/projects/2022/calculator/archive/v1.1.0/Calculator.zip" download="Calculator V1.1.0.zip">V1.1.0</a>
-                                                <a href="/downloads/projects/2022/calculator/archive/v1.0.0/Calculator.zip" download="Calculator V1.0.0.zip">V1.0.0</a>
-                                            </li>
-                                        </ul>
-                                    </p>
-                                    <br />
-                                    <h4>Android</h4>
-                                    <p>
-                                        <ul>
-                                            Stack It Up
-                                            <li>
-                                                <a href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.1.0/Stack It Up.apk" download="Stack It Up V1.1.0.apk">V1.1.0</a>
-                                                <a href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.0.0/Stack It Up.apk" download="Stack It Up V1.0.0.apk">V1.0.0</a>
-                                            </li>
-                                        </ul>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="documentation" class="overlay">
-                            <div class="popup">
-                                <h2>Documentation archive</h2>
-                                <a class="close" href="#">&times;</a>
-                                <div class="content">
-                                    <br />
-                                    <h4>Android</h4>
-                                    <p>
-                                        <ul>
-                                            Stack It Up
-                                            <li>
-                                                <a target="_blank" href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.1.0/Stack It Up Documentation.txt">V1.1.0</a>
-                                                <a target="_blank" href="/downloads/games/3d/2022/android/stack-it-up/archive/v1.0.0/Stack It Up Documentation.txt">V1.0.0</a>
-                                            </li>
-                                        </ul>
-                                    </p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="content">
+                        <h4>Bomber Man</h4>
+                        <div class="progress-line"><span class="available"></span></div>
+                        <div class="info">
+                            <p>Pricing<br><span>Free</span></p>
+                            <a href="#bomberman">For <i class='bx bxl-windows'></i></a>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <!-- <p style="text-align: center;">No games here, yet...</p> -->
-            
-            <div id="games" class="games">
-                <h2>Games - Projects</h2>
-                <ul>
-                    <li class="list active" data-filter="all">All</li>
-                    <!-- <li class="list" data-filter="pc/mobile">Pc/Mobile Games</li> -->
-                    <li class="list" data-filter="pc">Pc</li>
-                    <li class="list" data-filter="mobile">Mobile</li>
-                </ul>
-                <div class="cardBx">
+                <div id="bomberman" class="overlay">
+                    <div class="popup">
+                        <h2>Bomber Man</h2>
+                        <a class="close" href="#main">&times;</a>
+                        <div class="content">
+                            <br />
+                            <a class="a-btn" href="/downloads/games/2d/2022/windows/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-windows'></i> Download Now</a>
+                            <!-- <a class="a-btn" href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-tux'></i> Download Now</a> -->
+                            <br />
+                            <br />
+                            <h4>About</h4>
+                            <p>
+                                It started raining bomb's from out the sky!<br />
+                                Dodge the bombs to stay alive.<br />
+                                The more bomb's you dodge the more score you gain.
+                            </p>
+                            <br />
+                            <h4>Information</h4>
+                            <p>
+                                Made by: fsForward<br />
+                                Latest version: V1.2.0<br />
+                                Latest update: 18/07/2022<br />
+                                Platform: Windows<br />
+                                Size: 69.25MB<br />
+                                Perspective: 2D
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="card" data-item="pc">
-                        <div class="container">
-                            <div class="scene">
-                                <div class="info-card">
-                                    <div class="info-card__face info-card__face--front">
-                                        <img src="/images/games/2d/2022/windows/bomber-man/BomberManThumbnail.png" alt="">
-                                        <!-- <a class="info-btn" target="_blank" href="/games/bomber-man/Bomber Man Documentation.html"><i class='bx bx-info-circle'></i></a> -->
-                                        <!-- <p class="new"><b>NEW</b></p> -->
-                                    </div>
+                <div class="card" data-item="pc">
+                    <div class="containere">
+                        <div class="scene">
+                            <div class="info-card">
+                                <div class="info-card__face info-card__face--front">
+                                    <img src="/images/projects/2022/calculator/CalculatorThumbnail.png" alt="">
+                                    <!-- <a class="info-btn" target="_blank" href="/games/bomber-man/Bomber Man Documentation.html"><i class='bx bx-info-circle'></i></a> -->
+                                    <p class="new"><b>NEW UPDATE: V1.6.0</b></p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="content">
+                        <h4>Calculator</h4>
+                        <div class="progress-line"><span class="available"></span></div>
+                        <div class="info">
+                            <p>Pricing<br><span>Free</span></p>
+                            <a href="#calculator">For <i class='bx bxl-windows'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="calculator" class="overlay">
+                    <div class="popup">
+                        <h2>Calculator</h2>
+                        <a class="close" href="#main">&times;</a>
                         <div class="content">
-                            <h4>Bomber Man</h4>
-                            <div class="progress-line"><span class="available"></span></div>
-                            <div class="info">
-                                <p>Pricing<br><span>Free</span></p>
-                                <a href="#bomberman">For <i class='bx bxl-windows'></i></a>
-                            </div>
+                            <br />
+                            <a class="a-btn" href="/downloads/projects/2022/calculator/Calculator Launcher.exe" download="Calculator Launcher.exe"><i class='bx bxl-windows'></i> Download Now</a>
+                            <!-- <a class="a-btn" href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-tux'></i> Download Now</a> -->
+                            <br />
+                            <br />
+                            <h4>About</h4>
+                            <p>
+                                Calculate easy and fast!
+                            </p>
+                            <br />
+                            <h4>Information</h4>
+                            <p>
+                                Made by: fsForward<br />
+                                Latest version: V1.6.0<br />
+                                Latest update: 18/08/2022<br />
+                                Platform: Windows<br />
+                                Size: 230KB<br />
+                                Perspective: 2D (CMD/Console)
+                            </p>
                         </div>
                     </div>
-                    <div id="bomberman" class="overlay">
-                        <div class="popup">
-                            <h2>Bomber Man</h2>
-                            <a class="close" href="#">&times;</a>
-                            <div class="content">
-                                <br />
-                                <a class="a-btn" href="/downloads/games/2d/2022/windows/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-windows'></i> Download Now</a>
-                                <!-- <a class="a-btn" href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-tux'></i> Download Now</a> -->
-                                <br />
-                                <br />
-                                <h4>About</h4>
-                                <p>
-                                    It started raining bomb's from out the sky!<br />
-                                    Dodge the bombs to stay alive.<br />
-                                    The more bomb's you dodge the more score you gain.
-                                </p>
-                                <br />
-                                <h4>Information</h4>
-                                <p>
-                                    Made by: fsForward<br />
-                                    Latest version: V1.2.0<br />
-                                    Latest update: 18/07/2022<br />
-                                    Platform: Windows<br />
-                                    Size: 69.25MB<br />
-                                    Perspective: 2D
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="card" data-item="pc">
-                        <div class="container">
-                            <div class="scene">
-                                <div class="info-card">
-                                    <div class="info-card__face info-card__face--front">
-                                        <img src="/images/projects/2022/calculator/CalculatorThumbnail.png" alt="">
-                                        <!-- <a class="info-btn" target="_blank" href="/games/bomber-man/Bomber Man Documentation.html"><i class='bx bx-info-circle'></i></a> -->
-                                        <p class="new"><b>NEW UPDATE: V1.6.0</b></p>
-                                    </div>
+                <div class="card" data-item="mobile">
+                    <div class="containere">
+                        <div class="scene">
+                            <div class="info-card">
+                                <div class="info-card__face info-card__face--front">
+                                    <img src="/images/games/3d/2022/windows/stack-it-up/StackItUpThumbnail.png" alt="">
+                                    <a class="info-btn" target="_blank" href="/downloads/games/3d/2022/android/stack-it-up/Stack It Up Documentation.txt"><i class='bx bx-info-circle'></i></a>
+                                    <!-- <p class="new"><b>NEW UPDATE: 1.1.0</b></p> -->
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="content">
+                        <h4>Stack It Up</h4>
+                        <div class="progress-line"><span class="available"></span></div>
+                        <div class="info">
+                            <p>Pricing<br><span>Free</span></p>
+                            <a href="#stackitup">For <i class='bx bxl-android'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="stackitup" class="overlay">
+                    <div class="popup">
+                        <h2>Stack It Up</h2>
+                        <a class="close" href="#main">&times;</a>
                         <div class="content">
-                            <h4>Calculator</h4>
-                            <div class="progress-line"><span class="available"></span></div>
-                            <div class="info">
-                                <p>Pricing<br><span>Free</span></p>
-                                <a href="#calculator">For <i class='bx bxl-windows'></i></a>
-                            </div>
+                            <br />
+                            <a class="a-btn" href="/downloads/games/3d/2022/android/stack-it-up/Stack It Up.apk" download="Stack It Up.apk"><i class='bx bxl-android'></i> Download Now</a>
+                            <br />
+                            <br />
+                            <h4>About</h4>
+                            <p>
+                                Stack cubes on top of eachoter!<br />
+                                How many cubes can you stack?
+                            </p>
+                            <br />
+                            <h4>Information</h4>
+                            <p>
+                                Made by: fsForward<br />
+                                Latest version: V1.1.0<br />
+                                Released on: 02/08/2022 <br />
+                                Latest update: 03/08/2022<br />
+                                Platform: Android<br />
+                                Size: 20.1MB<br />
+                                Perspective: 3D
+                            </p>
                         </div>
                     </div>
-                    <div id="calculator" class="overlay">
-                        <div class="popup">
-                            <h2>Calculator</h2>
-                            <a class="close" href="#">&times;</a>
-                            <div class="content">
-                                <br />
-                                <a class="a-btn" href="/downloads/projects/2022/calculator/Calculator Launcher.exe" download="Calculator Launcher.exe"><i class='bx bxl-windows'></i> Download Now</a>
-                                <!-- <a class="a-btn" href="/games/bomber-man/Bomber Man Launcher.exe" download="Bomber Man Launcher.exe"><i class='bx bxl-tux'></i> Download Now</a> -->
-                                <br />
-                                <br />
-                                <h4>About</h4>
-                                <p>
-                                    Calculate easy and fast!
-                                </p>
-                                <br />
-                                <h4>Information</h4>
-                                <p>
-                                    Made by: fsForward<br />
-                                    Latest version: V1.6.0<br />
-                                    Latest update: 18/08/2022<br />
-                                    Platform: Windows<br />
-                                    Size: 230KB<br />
-                                    Perspective: 2D (CMD/Console)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="card" data-item="mobile">
-                        <div class="container">
-                            <div class="scene">
-                                <div class="info-card">
-                                    <div class="info-card__face info-card__face--front">
-                                        <img src="/images/games/3d/2022/windows/stack-it-up/StackItUpThumbnail.png" alt="">
-                                        <a class="info-btn" target="_blank" href="/downloads/games/3d/2022/android/stack-it-up/Stack It Up Documentation.txt"><i class='bx bx-info-circle'></i></a>
-                                        <!-- <p class="new"><b>NEW UPDATE: 1.1.0</b></p> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h4>Stack It Up</h4>
-                            <div class="progress-line"><span class="available"></span></div>
-                            <div class="info">
-                                <p>Pricing<br><span>Free</span></p>
-                                <a href="#stackitup">For <i class='bx bxl-android'></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="stackitup" class="overlay">
-                        <div class="popup">
-                            <h2>Stack It Up</h2>
-                            <a class="close" href="#">&times;</a>
-                            <div class="content">
-                                <br />
-                                <a class="a-btn" href="/downloads/games/3d/2022/android/stack-it-up/Stack It Up.apk" download="Stack It Up.apk"><i class='bx bxl-android'></i> Download Now</a>
-                                <br />
-                                <br />
-                                <h4>About</h4>
-                                <p>
-                                    Stack cubes on top of eachoter!<br />
-                                    How many cubes can you stack?
-                                </p>
-                                <br />
-                                <h4>Information</h4>
-                                <p>
-                                    Made by: fsForward<br />
-                                    Latest version: V1.1.0<br />
-                                    Released on: 02/08/2022 <br />
-                                    Latest update: 03/08/2022<br />
-                                    Platform: Android<br />
-                                    Size: 20.1MB<br />
-                                    Perspective: 3D
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
 
+        <!-- About section -->
+        <section class="site-section section-about text-center" id="about">
+            <div class="container">
+                <h2>ABOUT OUR WORK</h2>
+                <p class="section-subtitle"><span>Our goal is to create and deliver smooth games</span></p>
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>Game Development</h3>
+                            <p>We make free games without ads. Nobody likes to pay and watch ads. because it ruins the user experience.</p>
+                        </div><!-- /.feature-about -->
+                    </div>                    
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-music" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>Music development</h3>
+                            <p>We try to make music with the best quality for you to enjoy.</p>
+                        </div><!-- /.feature-about -->
+                    </div>                    
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-laptop" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>Hardware</h3>
+                            <p>We dont have a gaming laptop/pc to make realy good games, but we try to make the most out of it. (Most games are 2D/Short because of this)</p>
+                        </div><!-- /.feature-about -->
+                    </div>                    
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>SOCIAL MEDIA</h3>
+                            <p>We like feedback so we can fix bugs or improve in our work. We most of the time respond back within 2 days! So <a href="#team">contact</a> us!</p>
+                        </div><!-- /.feature-about -->
+                    </div>
                 </div>
             </div>
+        </section><!-- /.section-about -->
+        <!-- End About section -->
 
-            <div style="text-align: center; color: red;">
-                <h2>PC Files are stored at: C:/fsForward/ (This folder is hidden by default)</h2>
+        <!-- Skills section -->
+        <section class="site-section section-skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>SKILLS WE GOT</h2>
+                        <div class="progress-group">
+                            <p>Game Development</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="37">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>Music Development</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="85">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>Web Development</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="55">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>Device optimization</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="80">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>Social Media</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="85">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-skills -->
+        <!-- End Skills section -->
+
+        <!-- Counters section -->
+        <section class="site-section section-counters text-center" id="counters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2 col-xs-6 col-sm-offset-2">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-rocket" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="3" data-speed="2000">3</span>
+                            </div><!-- /.rectangle -->
+                            <p>Projects Launched</p>
+                        </div><!-- /.counter -->
+                    </div>
+                    <div class="col-sm-2 col-xs-6">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-trophy" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="0" data-speed="2000">0</span>
+                            </div><!-- /.rectangle -->
+                             <p>Awards won</p>
+                        </div><!-- /.counter -->
+                    </div>                    
+                    <div class="col-sm-2 col-xs-6">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="0" data-speed="2000">0</span>
+                            </div><!-- /.rectangle -->
+                             <p>Proposals Received</p>
+                        </div><!-- /.counter -->
+                    </div>                    
+                    <div class="col-sm-2 col-xs-6">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="129" data-speed="2000">144</span>
+                            </div><!-- /.rectangle -->
+                             <p>Hours of work</p>
+                        </div><!-- /.counter -->
+                    </div>                    
+                </div>
+
+            </div>
+        </section><!-- /.section-counters -->
+        <!-- End Counters section -->
+
+        <!-- Team section -->
+        <section class="site-section section-team" id="team" style="text-align: center !important;">
+            <div class="container">
+                <h2>MEET MY TEAM</h2>
+                <p class="section-subtitle"><span>This is the team that is working with me</span></p>
+                
+                <div class="team">
+                    <div class="row">   
+                        <!-- Team Member --> 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="team-member">
+                                <div class="flipper">
+                                    <div class="team-member-front">
+                                        <div class="team-member-thumb">
+                                            <img src="assets/img/Me.jpg" class="img-res" alt="">
+                                        </div>  <!-- /.team-member-thumb -->
+                                        <p class="team-member-front-name">fsForward</p>
+                                    </div><!-- /.team-member-front -->
+                                    <div class="team-member-back">
+                                        <div class="team-member-info">
+                                            <h3 class="team-member-back-name">FSFORWARD</h3>
+                                            <p class="team-member-back-position">Game/Music Developer</p>
+                                            <p class="team-member-back-info">I am a self taught Game/Website/Music Developer. I wanted to share my work to the world, and hope to get better.</p>
+                                            <div class="social-icons small">
+                                                <a href="#" class="rectangle"><i class="fa fa-youtube"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-instagram"></i></a>
+                                            </div>
+                                        </div><!-- /.team-member-back-info -->
+                                    </div><!-- /.team-member-back -->  
+                                </div>         
+                            </div><!-- /.team-member -->       
+                        </div>
+                        <!-- Team Member --> 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="team-member">
+                                <div class="flipper">
+                                    <div class="team-member-front">
+                                        <div class="team-member-thumb">
+                                            <img src="assets/img/Albstrew.jpg" class="img-res" alt="">
+                                        </div>  <!-- /.team-member-thumb -->
+                                        <p class="team-member-front-name">Albstrew</p>
+                                    </div><!-- /.team-member-front -->
+                                    <div class="team-member-back">
+                                        <div class="team-member-info">
+                                            <h3 class="team-member-back-name">ALBSTREW</h3>
+                                            <p class="team-member-back-position">Music Developer</p>
+                                            <p class="team-member-back-info">I am an EDM producer from india. I always make sure to have something unique in each release and keep variety.</p>
+                                            <div class="social-icons small">
+                                                <a href="#" class="rectangle"><i class="fa fa-youtube"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-instagram"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-spotify"></i></a>
+                                            </div>
+                                        </div><!-- /.team-member-back-info -->
+                                    </div><!-- /.team-member-back -->  
+                                </div>         
+                            </div><!-- /.team-member -->       
+                        </div>
+                        </div>
+                    </div>
+                </div><!-- /.team -->   
+            </div>
+        </section><!-- /.section-team -->
+        <!-- End Team section -->
+        
+        <!-- Social Networks section --> 
+        <section class="section-networks blue-bg">
+            <div class="container">
+                <a href="#" class="rectangle">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="#" class="rectangle">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#" class="rectangle">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+        </section><!-- /.section-networks-->
+        <!-- End Social Networks section --> 
+
+    </main><!-- /#main -->
+    <!-- End Main content -->
+
+    <!-- Footer --> 
+    <footer id="colophon" class="site-footer">
+
+        <div class="container-fluid">
+
+            <ul class="list-unstyled list-inline">
+                <li class="page-scroll"><a href="#top">Home</a></li>
+                <li class="page-scroll"><a href="#main">Main</a></li>
+                <li class="page-scroll"><a href="#about">About</a></li>
+                <li class="page-scroll"><a href="#counters">Counters</a></li>
+                <li class="page-scroll"><a href="#team">Team</a></li>
+            </ul>
+
+            <div class="page-scroll">
+                <a href="#top" class="rectangle">
+                    <i class="fa fa-angle-double-up"></i>
+                </a>
             </div>
 
-            <div style="text-align: center; padding: 30px;">
-                <h2>Official music</h2>
-                <a target="_blank" href="https://www.youtube.com/watch?v=4-8H_cYg6OU&list=PL7ueFdDeBsWox1yjMYcLzEE-6pq-wUMPZ">Evil Nights</a>
-            </div>
-        </main>
-        <script src="/app.js"></script>
-    </body>
+        </div>
+
+        <div class="container text-center">
+            <p class="copyright">&copy; <a href="http://fsforward.com/">fsForward</a> - 2022</p>
+        </div>
+
+    </footer><!-- /#footer -->
+    <!-- End Footer --> 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/app.js"></script>
+
+    <!-- jQuery core js | Do not Delete -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap core js | Do not Delete -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap progressbar JS -->
+    <script src="assets/js/bootstrap-progressbar.min.js"></script>
+
+    <!-- Count To JS -->
+    <script src="assets/js/jquery.countTo.min.js"></script>
+
+    <!-- Easing JS -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+    <!-- Shuffle JS -->
+    <script src="assets/js/jquery.shuffle.min.js"></script>
+
+    <!-- Slick Carousel JS -->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!-- Touchswipe JS -->
+    <script src="assets/js/touchswipe.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  
+</body>
 </html>
