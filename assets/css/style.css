@@ -416,7 +416,7 @@ html, body {
   font-weight: 700;
   text-align: center;
   margin: 0 auto;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .hero-content p {
