@@ -69,8 +69,8 @@ form {
 }
 
 #main-content {
-  margin-left: 0;
   transition: margin-left 0.5s ease;
+  text-align: center;
 }
 
 #about-section {
@@ -88,18 +88,29 @@ form {
 #image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px;
+  justify-content: center; /* added */
+  margin: 10px 25px;
 }
 
 .image {
-  flex-basis: 30%;
+  /* flex-basis: 30%; */
   width: 300px;
   height: 300px;
-  margin: 10px;
+  margin: 20px;
   object-fit: cover;
   transition: transform 0.2s ease;
   transform-origin: center;
+}
+
+.imager {
+  /* flex-basis: 30%; */
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
 }
 
 .image:hover {
