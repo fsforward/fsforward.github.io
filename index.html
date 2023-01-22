@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>fsForward - Home</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>My Image Gallery</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-    <h1>Working on website v1.0.0.0</h1>
+  <div id="header">
+    <a href="/index.html">
+      <img src="/Images/logo/fsForwardLogoBlack.png" alt="Logo" id="logo">
+    </a>
+    <form>
+      <input type="text" id="search-input" placeholder="Search by name..." onkeyup="filterImages()">
+    </form>
+    <nav id="links-container">
+      <!-- <a href="#home">Home</a>
+      <a href="#about">About</a> -->
+    </nav>
+  </div>
+  <main id="main-content">
+    <section id="about-section">
+      <h1>Welcome to my personal website</h1>
+      <p>I made it look Easy, Clean &amp; Modern. (Currently no mobile support &amp; still Work In Progress)</p>
+    </section>
+    <div id="image-container">
+      <a href="https://www.youtube.com/watch?v=4OEcYnKYR_Q">
+        <img class="image" src="/Images/fsForward - Exception.jpg" data-name="Exception">
+      </a>
+      <a href="https://www.youtube.com/watch?v=tAIET7yb6Iw">
+        <img class="image" src="/Images/fsForward - Darkness Will Fall.jpg" data-name="Darkness Will Fall">
+      </a>
+      <a href="https://www.youtube.com/watch?v=FkIjogJyY1U">
+        <img class="image" src="/Images/fsForward - Dark Secret.jpg" data-name="Dark Secret">
+      </a>
+      <!-- Add more images here -->
+    </div>
+  </main>
+  <footer>
+    &copy;fsForward 2023
+  </footer>
 </body>
 
 </html>
