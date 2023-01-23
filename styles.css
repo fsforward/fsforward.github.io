@@ -80,6 +80,12 @@ form {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
+#about-section p {
+  margin: 15px auto;
+  max-width: 750px;
+  text-align: center;
+}
+
 #about-section h1 {
   margin-bottom: 10px;
   font-size: 2em;
@@ -120,7 +126,7 @@ form {
 footer {
   padding: 20px;
   text-align: center;
-  position: sticky;
+  position:fixed;
   left: 0;
   bottom: 0;
   width: 100%;
