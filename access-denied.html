@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Access Denied</title>
+  <style>
+    body {
+      background: url(Images/Background.jpg) no-repeat center center fixed;
+      background-size: cover;
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #000;
+      font-size: 48px;
+      text-align: center;
+    }
+
+    .denied-container {
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .denied-container p {
+      color: #000;
+      font-size: 24px;
+      margin-top: 20px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .debug-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="denied-container">
+    <h1>Access Denied</h1>
+    <p>This website is optimized for desktop devices. However, if you know what you are doing, you can click the Debug button below to proceed.</p>
+  </div>
+  <button class="debug-button" onclick="redirectToIndex()">Debug</button>
+  <script src="app.js"></script>
+  <script>
+    function redirectToIndex() {
+      var currentUrl = window.location.href;
+      if (currentUrl.includes('debug-mode')) {
+        window.location.href = 'index.html';
+      } else {
+        window.location.href = 'index.html?debug-mode';
+      }
+    }
+  </script>
+</body>
+</html>
