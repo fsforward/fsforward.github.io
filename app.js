@@ -12,7 +12,7 @@ window.addEventListener('resize', function() {
 });
 
 function checkIfNotDesktop() {
-  var isNotDesktop = !window.matchMedia('(hover: hover)').matches;
+  var isNotDesktop = !window.matchMedia('(pointer: fine)').matches;
   var urlParams = new URLSearchParams(window.location.search);
   var debugMode = urlParams.has('debug-mode');
   var debugWarning = document.getElementById('debugWarning');
@@ -37,6 +37,7 @@ function checkIfNotDesktop() {
     }
   }
 }
+
 
 
 
