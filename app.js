@@ -49,23 +49,24 @@ function checkScreenWidth() {
     // Redirect to denied page if screen width is less than 600px and not in debug mode
     if (!window.location.href.includes('access-denied.html')) {
       window.location.href = 'access-denied.html';
+      return; // Add this line to exit the function after redirection
     }
   } else {
     // Redirect to index page if on denied page and screen width is greater than or equal to 600px, or in debug mode
     if (window.location.href.includes('access-denied.html')) {
       window.location.href = 'index.html';
-    }
-
-    if (debugMode) {
-      // Show debug warning when in debug mode
-      debugWarning.style.display = 'block';
-    } else {
-      // Hide debug warning when not in debug mode
-      debugWarning.style.display = 'none';
+      return; // Add this line to exit the function after redirection
     }
   }
-}
 
+  if (debugMode) {
+    // Show debug warning when in debug mode
+    debugWarning.style.display = 'block';
+  } else {
+    // Hide debug warning when not in debug mode
+    debugWarning.style.display = 'none';
+  }
+}
 
 function openPopup(popupId) {
   var popup = document.getElementById(popupId);
