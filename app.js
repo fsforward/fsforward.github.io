@@ -1,29 +1,29 @@
 window.addEventListener('DOMContentLoaded', function() {
-  // Check if not on mobile on initial page load
-  checkIfNotMobile();
+  // Check if not on desktop on initial page load
+  checkIfNotDesktop();
 
   // Rest of the code...
 
 });
 
 window.addEventListener('resize', function() {
-  // Check if not on mobile on window resize
-  checkIfNotMobile();
+  // Check if not on desktop on window resize
+  checkIfNotDesktop();
 });
 
-function checkIfNotMobile() {
-  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+function checkIfNotDesktop() {
+  var isNotDesktop = !window.matchMedia('(pointer: fine)').matches;
   var urlParams = new URLSearchParams(window.location.search);
   var debugMode = urlParams.has('debug-mode');
   var debugWarning = document.getElementById('debugWarning');
 
-  if (!isMobile && !debugMode) {
-    // Redirect to denied page if not on a mobile device and not in debug mode
+  if (isNotDesktop && !debugMode) {
+    // Redirect to denied page if not on desktop and not in debug mode
     if (!window.location.href.includes('access-denied.html')) {
       window.location.href = 'access-denied.html';
     }
   } else {
-    // Redirect to index page if on denied page and on a mobile device, or in debug mode
+    // Redirect to index page if on denied page and on desktop, or in debug mode
     if (window.location.href.includes('access-denied.html')) {
       window.location.href = 'index.html';
     }
@@ -38,6 +38,9 @@ function checkIfNotMobile() {
   }
 }
 
+
+
+
 function openPopup(popupId) {
   var popup = document.getElementById(popupId);
   popup.style.display = "block";
@@ -47,4 +50,3 @@ function closePopup(popupId) {
   var popup = document.getElementById(popupId);
   popup.style.display = "none";
 }
-
