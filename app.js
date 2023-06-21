@@ -45,7 +45,7 @@ function checkScreenWidth() {
   var debugMode = urlParams.has('debug-mode');
   var debugWarning = document.getElementById('debugWarning');
 
-  if (screenWidth < 600 && !debugMode) {
+  if (screenWidth < 1000 && !debugMode) {
     // Redirect to denied page if screen width is less than 600px and not in debug mode
     if (!window.location.href.includes('access-denied.html')) {
       window.location.href = 'access-denied.html';
