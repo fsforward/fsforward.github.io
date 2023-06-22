@@ -14,7 +14,8 @@ header {
   width: 100%;
   padding: 5px 0;
   z-index: 999;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow at the bottom */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add a box shadow at the bottom */
 }
 
 .container {
@@ -27,7 +28,8 @@ header {
 }
 
 .logo img {
-  width: 85px; /* Adjust the width as needed */
+  width: 85px;
+  /* Adjust the width as needed */
   height: auto;
 }
 
@@ -35,10 +37,14 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Add this line to create a flex container */
-  justify-content: center; /* Add this line to horizontally center the menu */
-  align-items: center; /* Add this line to vertically center the menu */
-  flex-grow: 1; /* Add this line to make the menu fill the remaining space */
+  display: flex;
+  /* Add this line to create a flex container */
+  justify-content: center;
+  /* Add this line to horizontally center the menu */
+  align-items: center;
+  /* Add this line to vertically center the menu */
+  flex-grow: 1;
+  /* Add this line to make the menu fill the remaining space */
 }
 
 .menu li {
@@ -46,7 +52,8 @@ header {
 }
 
 .menu li:last-child {
-  margin-right: 0; /* Remove margin-right from the last menu item */
+  margin-right: 0;
+  /* Remove margin-right from the last menu item */
 }
 
 .menu li a {
@@ -56,7 +63,8 @@ header {
 }
 
 .search-bar {
-  margin-right: 20px; /* Add this line to create spacing between the search bar and the menu */
+  margin-right: 20px;
+  /* Add this line to create spacing between the search bar and the menu */
 }
 
 .search-form {
@@ -99,7 +107,8 @@ header {
 }
 
 .section h2 {
-  color: #ff69b4; /* Pink color for the header */
+  color: #ff69b4;
+  /* Pink color for the header */
 }
 
 .section p {
@@ -114,14 +123,17 @@ header {
 
 .subsection {
   flex-basis: 30%;
-  background-color: #f8f8f8; /* Light pink background color for the subsection */
+  background-color: #f8f8f8;
+  /* Light pink background color for the subsection */
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #ff69b4; /* Pink border for the subsection */
+  border: 1px solid #ff69b4;
+  /* Pink border for the subsection */
 }
 
 .subsection h3 {
-  color: #ff69b4; /* Pink color for the subheader */
+  color: #ff69b4;
+  /* Pink color for the subheader */
 }
 
 .subsection p {
@@ -142,13 +154,18 @@ header {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 225px; /* Adjust the width as desired */
+  width: 225px;
+  /* Adjust the width as desired */
   border: 1px solid #ccc;
   margin: 0 10px 10px 0;
-  padding: 3px; /* Adjust the padding as desired */
-  position: relative; /* Add position relative for sticker positioning */ 
-  cursor: pointer; /* Show pointer cursor when hovering over the card */
-  transition: transform 0.25s ease-out; /* Add transition effect */
+  padding: 3px;
+  /* Adjust the padding as desired */
+  position: relative;
+  /* Add position relative for sticker positioning */
+  cursor: pointer;
+  /* Show pointer cursor when hovering over the card */
+  transition: transform 0.25s ease-out;
+  /* Add transition effect */
 }
 
 /* .card-container {
@@ -156,7 +173,8 @@ header {
 } */
 
 .mod-card:hover {
-  transform: scale(1.05); /* Increase scale when hovered */
+  transform: scale(1.05);
+  /* Increase scale when hovered */
 }
 
 .mod-info {
@@ -179,12 +197,17 @@ header {
 .mod-details h3 {
   margin: 0;
   font-size: 16px;
-  color: #ff69b4; /* Pink color for the mod name */
+  color: #ff69b4;
+  /* Pink color for the mod name */
 }
 
 .mod-details p {
   margin: 0;
   font-size: 12px;
+}
+
+.mod-info-card h3 {
+  color: #FF69B4;
 }
 
 .author {
@@ -218,8 +241,11 @@ header {
   text-align: center;
 }
 
+/* Modal styles */
 .modal {
   display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -227,88 +253,188 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  opacity: 0;
+  /* Added initial opacity */
+  transition: opacity 0.3s ease-in-out;
+  /* Added transition */
+}
+
+.modal.show {
+  opacity: 1;
+  /* Show the modal with full opacity */
 }
 
 .modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  opacity: 0;
+  /* Added initial opacity */
+  transition: opacity 0.3s ease-in-out;
+  /* Added transition */
 }
 
+.modal-content.show {
+  opacity: 1;
+  /* Show the modal content with full opacity */
+}
+
+.modal-title {
+  font-size: 24px;
+  color: #ff69b4;
+  margin-top: 20px;
+  text-align: left;
+  margin-bottom: 0;
+  display: inline;
+}
+
+.modal-paragraph {
+  margin: 0 0 10px 20px;
+}
+
+/* Close button styles */
 .close-btn {
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 10px;
+  /* Updated position to top right */
   cursor: pointer;
-  font-size: xx-large;
+  font-size: 40px;
+  color: pink;
 }
 
-.mod-info-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.info-container {
-  display: flex;
-}
-
-.mod-info-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-.mod-info-card h3 {
+.arrow-btn {
+  cursor: pointer;
   font-size: 24px;
-  margin-bottom: 5px;
+  color: #ff69b4;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
 }
 
-.mod-info-card p {
-  margin: 0;
+.arrow-btn.open {
+  transform: rotate(180deg);
 }
 
-.info {
+
+/* Card styles */
+.card-container {
+  display: flex;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: left;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  width: 160px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.mod-description {
-  margin-top: 20px;
+.card img {
+  width: 150px;
+  height: 150px;
 }
 
-.download-buttons {
-  margin-top: 20px;
+.card-content {
+  margin-top: 10px;
 }
 
-.download-btn {
+.author i {
+  font-size: 12px;
+  color: green;
+}
+
+/* Message styles */
+.message-container {
+  width: 500px;
+  padding: 10px 25px;
+}
+
+.message {
+  margin: 0;
+}
+
+/* Name styles */
+.card-title {
+  color: #ff69b4;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  /* Added transition */
+}
+
+.show-content {
+  max-height: 500px;
+  /* Adjust the height based on your content */
+}
+
+
+.face-button {
+  --accent-color: #FF69B4;
+  --background-color: #FFF;
+  --text-color: #FF69B4;
+  --hover-background-color: #FF69B4;
+  --hover-text-color: #FFF;
+  --transition-duration: 0.4s;
+
+  min-width: 200px;
+  height: 40px;
   display: inline-block;
-  margin-right: 10px;
-  padding: 10px 20px;
-  background-color: #2196F3;
-  color: #fff;
+  border: 3px solid var(--accent-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
   text-decoration: none;
-  border-radius: 5px;
+  color: var(--text-color);
+  overflow: hidden;
+  margin: 5px;
 }
 
+.face-button .icon {
+  margin-right: 6px;
+}
+
+.face-primary,
+.face-secondary {
+  display: block;
+  padding: 12px 0;
+  line-height: var(--height);
+  transition: margin var(--transition-duration);
+}
+
+.face-primary {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+.face-button:hover .face-primary {
+  margin-top: -40px;
+  background-color: var(--hover-background-color);
+  color: var(--hover-text-color);
+}
 
 @media only screen and (max-width: 600px) {
   .menu {
-    flex-direction: column; /* Change the direction of the menu items to vertical */
-    align-items: center; /* Center align the menu items vertically */
+    flex-direction: column;
+    /* Change the direction of the menu items to vertical */
+    align-items: center;
+    /* Center align the menu items vertically */
   }
 
   .top-section {
@@ -316,16 +442,20 @@ header {
   }
 
   .menu li {
-    margin-right: 0; /* Remove the right margin from the menu items */
-    margin-bottom: 10px; /* Add some spacing between the menu items */
+    margin-right: 0;
+    /* Remove the right margin from the menu items */
+    margin-bottom: 10px;
+    /* Add some spacing between the menu items */
   }
 
   .main-section,
   .search-section {
-    width: 90%; /* Adjust the width of the main and search sections for smaller screens */
+    width: 90%;
+    /* Adjust the width of the main and search sections for smaller screens */
   }
 
   .section {
-    padding: 10px; /* Adjust the padding for smaller screens */
+    padding: 10px;
+    /* Adjust the padding for smaller screens */
   }
 }

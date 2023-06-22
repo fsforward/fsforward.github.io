@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>fsForward | Main</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
   <header>
     <div class="container">
       <div class="logo">
         <img src="fsForward.png" alt="Your Logo">
       </div>
-      <p style="font-weight: bolder; font-size: x-small; width: 100%; background-color: yellow; text-align: center;">Website W.I.P!</p>
+      <p style="font-weight: bolder; font-size: x-small; width: 100%; background-color: yellow; text-align: center;">
+        Website W.I.P!</p>
       <!-- <nav>
         <ul class="menu">
           <li><a href="#">Home</a></li>
@@ -27,7 +30,7 @@
       </div>
     </div>
   </header>
-  
+
   <section class="search-section" style="display: none;">
     <section class="section top-section">
       <div class="downloadable-mods">
@@ -44,9 +47,9 @@
             <div class="mod-status">New</div>
           </div>
         </div>
-        
+
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('NerdsAlert-Legacy')">
             <div class="mod-info">
               <img src="Images/Medical-Resources.png" alt="Mod Logo">
               <div class="mod-details">
@@ -101,15 +104,16 @@
           </div>
         </div>
 
-      </div>  
+      </div>
     </section>
   </section>
 
   <section class="main-section">
     <section class="section top-section">
       <h2>Fabric Mods</h2>
-      <p>To use Fabric mods, you need to install the Fabric API. You can download the Fabric API from <a href="https://modrinth.com/mod/fabric-api">here</a>.</p>
-    
+      <p>To use Fabric mods, you need to install the Fabric API. You can download the Fabric API from <a
+          href="https://modrinth.com/mod/fabric-api">here</a>.</p>
+
       <div class="subsections">
         <div class="subsection">
           <h3>Lightweight and Flexible</h3>
@@ -117,16 +121,18 @@
         </div>
         <div class="subsection">
           <h3>Faster Loading with Fabric</h3>
-          <p>Fabric's optimized loading system enables faster loading times when using Fabric mods, enhancing your gameplay experience.</p>
+          <p>Fabric's optimized loading system enables faster loading times when using Fabric mods, enhancing your
+            gameplay experience.</p>
         </div>
         <div class="subsection">
           <h3>Support for Various Mods</h3>
-          <p>Fabric supports a wide range of mods developed by the community, providing you with numerous options to enhance your Minecraft gameplay.</p>
+          <p>Fabric supports a wide range of mods developed by the community, providing you with numerous options to
+            enhance your Minecraft gameplay.</p>
         </div>
       </div>
 
       <div class="downloadable-mods">
-        
+
         <div class="card-container">
           <div class="mod-card" onclick="openPopup('fsMod')">
             <div class="mod-info">
@@ -140,29 +146,33 @@
             <div class="mod-status">New</div>
           </div>
         </div>
-        
-      </div>  
+
+      </div>
     </section>
 
     <section class="section forge-section" style="margin-top: 10px;">
       <h2>Forge Mods</h2>
-      <p>To use Forge mods, you need to install the Forge mod loader. You can download Forge from <a href="https://files.minecraftforge.net/">here</a>.</p>
-    
+      <p>To use Forge mods, you need to install the Forge mod loader. You can download Forge from <a
+          href="https://files.minecraftforge.net/">here</a>.</p>
+
       <div class="subsections">
         <div class="subsection">
           <h3>Extensive Modding Support</h3>
-          <p>Forge provides extensive modding support, allowing developers to create and customize mods using a wide range of features and APIs.</p>
+          <p>Forge provides extensive modding support, allowing developers to create and customize mods using a wide
+            range of features and APIs.</p>
         </div>
         <div class="subsection">
           <h3>Large Modding Community</h3>
-          <p>Forge has a large and active modding community, offering a vast selection of mods to enhance your Minecraft experience.</p>
+          <p>Forge has a large and active modding community, offering a vast selection of mods to enhance your Minecraft
+            experience.</p>
         </div>
         <div class="subsection">
           <h3>Compatibility with Legacy Mods</h3>
-          <p>Forge ensures compatibility with many legacy mods, allowing you to continue using your favorite mods from previous Minecraft versions.</p>
+          <p>Forge ensures compatibility with many legacy mods, allowing you to continue using your favorite mods from
+            previous Minecraft versions.</p>
         </div>
       </div>
-    
+
       <div class="downloadable-mods">
 
         <div class="card-container">
@@ -180,7 +190,7 @@
         </div>
 
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('NerdsAlert-Legacy')">
             <div class="mod-info">
               <img src="Images/NerdsAlert-Legacy.jpg" alt="Mod Logo">
               <div class="mod-details">
@@ -228,35 +238,112 @@
   <!-- ################################################################################################################################################ -->
   <div class="modal" id="fsMod">
     <div class="modal-content">
-      <!-- Popup content -->
-      <div>
-        <div class="info-container">
-          <div class="mod-info-card">
-            <img src="Images/fsMod.png" alt="Mod Logo">
-            <div>
-              <h3>fsMod</h3>
-              <p>Fabric | 1.16.5</p>
-              <p class="author">By fsForward<i class='bx bxs-badge-check'></i></p>
-            </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="Images/fsMod.png" alt="Mod Logo" width="150" height="150">
+          <div class="card-content">
+            <h3 class="card-title">fsMod</h3>
+            <p>Fabric | 1.16.5</p>
+            <p class="author">By fsForward<i class='bx bxs-badge-check'></i></p>
           </div>
-          <div class="info">
-            <div class="mod-description">
-              <p>I apologize for any inconvenience, but currently, there are no downloads available. This website is still a work in progress, undergoing further development. Please revisit us at a later time when I will be ready to provide you with the desired downloads. Thank you for your patience and understanding.</p>
-            </div>
-            <div class="download-buttons">
-              <a href="download_link" class="download-btn">Download for Windows</a>
-              <a href="download_link" class="download-btn">Download for Mac</a>
-            </div>
+        </div>
+        <div class="card-details">
+          <div class="message-container">
+            <p class="message">The latest version of fsMod adds new food items to Minecraft! Check out the crafting
+              recipes and other information in the documentation (coming soon). Currently, this mod only supports
+              Fabric, but support for Forge will be available in the future.</p>
           </div>
+          <div class="button-container">
+            <a class="face-button" href="#">
+              <div class="face-primary">
+                <span class="icon"></span>
+                <i class='bx bxs-download'></i>Fabric | V1.0.0-1.16.5
+              </div>
+              <div class="face-secondary">
+                <span class="icon fa fa-hdd-o"></span>
+                Size: ? -
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2 class="modal-title">Older Versions</h2>
+      <div class="arrow-btn" onclick="toggleHiddenContent('fsMod')"><i class='bx bxs-chevron-down'></i></div>
+      <div class="hidden-content">
+        <p class="modal-paragraph">Fabric:</p>
+        <div class="button-container">
+          <a class="face-button" href="#">
+            <div class="face-primary">
+              <span class="icon"></span>
+              <i class='bx bxs-download'></i>Fabric | V1.0.0-1.16.5
+            </div>
+            <div class="face-secondary">
+              <span class="icon fa fa-hdd-o"></span>
+              Size: ? -
+            </div>
+          </a>
         </div>
       </div>
       <span class="close-btn" onclick="closePopup('fsMod')">&times;</span>
     </div>
-  </div>  
+  </div>
 
+  <div class="modal" id="NerdsAlert-Legacy">
+    <div class="modal-content">
+      <div class="card-container">
+        <div class="card">
+          <img src="Images/NerdsAlert-Legacy.jpg" alt="Mod Logo" width="150" height="150">
+          <div class="card-content">
+            <h3 class="card-title">NerdsAlert Legacy</h3>
+            <p>Forge | 1.16.5</p>
+            <p class="author">By fsForward<i class='bx bxs-badge-check'></i></p>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="message-container">
+            <p class="message">W.I.P</p>
+          </div>
+          <div class="button-container">
+            <a class="face-button" href="#">
+              <div class="face-primary">
+                <span class="icon"></span>
+                <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+              </div>
+              <div class="face-secondary">
+                <span class="icon fa fa-hdd-o"></span>
+                Size: ? -
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2 class="modal-title">Older Versions</h2>
+      <div class="arrow-btn" onclick="toggleHiddenContent('NerdsAlert-Legacy')"><i class='bx bxs-chevron-down'></i>
+      </div>
+      <div class="hidden-content">
+        <p class="modal-paragraph">Forge:</p>
+        <div class="button-container">
+          <a class="face-button" href="#">
+            <div class="face-primary">
+              <span class="icon"></span>
+              <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+            </div>
+            <div class="face-secondary">
+              <span class="icon fa fa-hdd-o"></span>
+              Size: ? -
+            </div>
+          </a>
+        </div>
+      </div>
+      <span class="close-btn" onclick="closePopup('NerdsAlert-Legacy')">&times;</span>
+    </div>
+  </div>
   <div class="debug-warning" id="debugWarning">
     Warning: This website may contain bugs because you are not visiting on a desktop device.
   </div>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
