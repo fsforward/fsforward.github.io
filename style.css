@@ -64,6 +64,7 @@ header {
 
 .search-bar {
   margin-right: 20px;
+  width: 90%;
   /* Add this line to create spacing between the search bar and the menu */
 }
 
@@ -429,7 +430,7 @@ header {
   color: var(--hover-text-color);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .menu {
     flex-direction: column;
     /* Change the direction of the menu items to vertical */

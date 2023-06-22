@@ -14,8 +14,8 @@
       <div class="logo">
         <img src="fsForward.png" alt="Your Logo">
       </div>
-      <p style="font-weight: bolder; font-size: x-small; width: 100%; background-color: yellow; text-align: center;">
-        Website W.I.P!</p>
+      <!-- <p style="font-weight: bolder; font-size: x-small; width: 100%; background-color: yellow; text-align: center;">
+        Website W.I.P!</p> -->
       <!-- <nav>
         <ul class="menu">
           <li><a href="#">Home</a></li>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="card-container">
-          <div class="mod-card" onclick="openPopup('NerdsAlert-Legacy')">
+          <div class="mod-card" onclick="openPopup('MedicalResources')">
             <div class="mod-info">
               <img src="Images/Medical-Resources.png" alt="Mod Logo">
               <div class="mod-details">
@@ -63,7 +63,7 @@
         </div>
 
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('NerdsAlert-Legacy')">
             <div class="mod-info">
               <img src="Images/NerdsAlert-Legacy.jpg" alt="Mod Logo">
               <div class="mod-details">
@@ -77,7 +77,7 @@
         </div>
 
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('NerdsAlert-OG')">
             <div class="mod-info">
               <img src="Images/NerdsAlert-O.G.png" alt="Mod Logo">
               <div class="mod-details">
@@ -91,11 +91,11 @@
         </div>
 
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('WorldD')">
             <div class="mod-info">
-              <img src="Images/worldD.jpg" alt="Mod Logo">
+              <img src="Images/WorldD.jpg" alt="Mod Logo">
               <div class="mod-details">
-                <h3>worldD</h3>
+                <h3>WorldD</h3>
                 <p>Forge | 1.16.5</p>
                 <p class="author">By MatterWaves</p>
               </div>
@@ -176,7 +176,7 @@
       <div class="downloadable-mods">
 
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('MedicalResources')">
             <div class="mod-info">
               <img src="Images/Medical-Resources.png" alt="Mod Logo">
               <div class="mod-details">
@@ -204,7 +204,7 @@
         </div>
 
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('NerdsAlert-OG')">
             <div class="mod-info">
               <img src="Images/NerdsAlert-O.G.png" alt="Mod Logo">
               <div class="mod-details">
@@ -218,11 +218,11 @@
         </div>
 
         <div class="card-container">
-          <div class="mod-card">
+          <div class="mod-card" onclick="openPopup('WorldD')">
             <div class="mod-info">
-              <img src="Images/worldD.jpg" alt="Mod Logo">
+              <img src="Images/WorldD.jpg" alt="Mod Logo">
               <div class="mod-details">
-                <h3>worldD</h3>
+                <h3>WorldD</h3>
                 <p>Forge | 1.16.5</p>
                 <p class="author">By MatterWaves</p>
               </div>
@@ -289,6 +289,57 @@
     </div>
   </div>
 
+  <div class="modal" id="MedicalResources">
+    <div class="modal-content">
+      <div class="card-container">
+        <div class="card">
+          <img src="Images/Medical-Resources.png" alt="Mod Logo" width="150" height="150">
+          <div class="card-content">
+            <h3 class="card-title">Medical Resources</h3>
+            <p>Forge | 1.16.5</p>
+            <p class="author">By fsForward<i class='bx bxs-badge-check'></i></p>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="message-container">
+            <p class="message">W.I.P</p>
+          </div>
+          <div class="button-container">
+            <a class="face-button" href="#">
+              <div class="face-primary">
+                <span class="icon"></span>
+                <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+              </div>
+              <div class="face-secondary">
+                <span class="icon fa fa-hdd-o"></span>
+                Size: ? -
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2 class="modal-title">Older Versions</h2>
+      <div class="arrow-btn" onclick="toggleHiddenContent('MedicalResources')"><i class='bx bxs-chevron-down'></i></div>
+      <div class="hidden-content">
+        <p class="modal-paragraph">Forge:</p>
+        <div class="button-container">
+          <a class="face-button" href="#">
+            <div class="face-primary">
+              <span class="icon"></span>
+              <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+            </div>
+            <div class="face-secondary">
+              <span class="icon fa fa-hdd-o"></span>
+              Size: ? -
+            </div>
+          </a>
+        </div>
+      </div>
+      <span class="close-btn" onclick="closePopup('MedicalResources')">&times;</span>
+    </div>
+  </div>
+
   <div class="modal" id="NerdsAlert-Legacy">
     <div class="modal-content">
       <div class="card-container">
@@ -340,6 +391,109 @@
       <span class="close-btn" onclick="closePopup('NerdsAlert-Legacy')">&times;</span>
     </div>
   </div>
+
+  <div class="modal" id="NerdsAlert-OG">
+    <div class="modal-content">
+      <div class="card-container">
+        <div class="card">
+          <img src="Images/NerdsAlert-O.G.png" alt="Mod Logo" width="150" height="150">
+          <div class="card-content">
+            <h3 class="card-title">NerdsAlert O.G</h3>
+            <p>Forge | 1.16.5</p>
+            <p class="author">By fsForward<i class='bx bxs-badge-check'></i></p>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="message-container">
+            <p class="message">W.I.P</p>
+          </div>
+          <div class="button-container">
+            <a class="face-button" href="#">
+              <div class="face-primary">
+                <span class="icon"></span>
+                <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+              </div>
+              <div class="face-secondary">
+                <span class="icon fa fa-hdd-o"></span>
+                Size: ? -
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2 class="modal-title">Older Versions</h2>
+      <div class="arrow-btn" onclick="toggleHiddenContent('NerdsAlert-OG')"><i class='bx bxs-chevron-down'></i></div>
+      <div class="hidden-content">
+        <p class="modal-paragraph">Forge:</p>
+        <div class="button-container">
+          <a class="face-button" href="#">
+            <div class="face-primary">
+              <span class="icon"></span>
+              <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+            </div>
+            <div class="face-secondary">
+              <span class="icon fa fa-hdd-o"></span>
+              Size: ? -
+            </div>
+          </a>
+        </div>
+      </div>
+      <span class="close-btn" onclick="closePopup('NerdsAlert-OG')">&times;</span>
+    </div>
+  </div>
+
+  <div class="modal" id="WorldD">
+    <div class="modal-content">
+      <div class="card-container">
+        <div class="card">
+          <img src="Images/WorldD.jpg" alt="Mod Logo" width="150" height="150">
+          <div class="card-content">
+            <h3 class="card-title">WorldD</h3>
+            <p>Forge | 1.16.5</p>
+            <p class="author">By fsForward<i class='bx bxs-badge-check'></i></p>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="message-container">
+            <p class="message">W.I.P</p>
+          </div>
+          <div class="button-container">
+            <a class="face-button" href="#">
+              <div class="face-primary">
+                <span class="icon"></span>
+                <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+              </div>
+              <div class="face-secondary">
+                <span class="icon fa fa-hdd-o"></span>
+                Size: ? -
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2 class="modal-title">Older Versions</h2>
+      <div class="arrow-btn" onclick="toggleHiddenContent('WorldD')"><i class='bx bxs-chevron-down'></i></div>
+      <div class="hidden-content">
+        <p class="modal-paragraph">Forge:</p>
+        <div class="button-container">
+          <a class="face-button" href="#">
+            <div class="face-primary">
+              <span class="icon"></span>
+              <i class='bx bxs-download'></i>Forge | V1.0.0-1.16.5
+            </div>
+            <div class="face-secondary">
+              <span class="icon fa fa-hdd-o"></span>
+              Size: ? -
+            </div>
+          </a>
+        </div>
+      </div>
+      <span class="close-btn" onclick="closePopup('WorldD')">&times;</span>
+    </div>
+  </div>
+
   <div class="debug-warning" id="debugWarning">
     Warning: This website may contain bugs because you are not visiting on a desktop device.
   </div>
