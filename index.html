@@ -109,30 +109,55 @@
   </section>
 
   <section class="main-section">
-    <section class="section top-section">
-      <h2>Fabric Mods</h2>
-      <p>To use Fabric mods, you need to install the Fabric API. You can download the Fabric API from <a
-          href="https://modrinth.com/mod/fabric-api">here</a>.</p>
 
+    <section class="section top-section">
+      <h2>Mod Documentations</h2>
       <div class="subsections">
         <div class="subsection">
-          <h3>Lightweight and Flexible</h3>
-          <p>Fabric is known for its lightweight nature, allowing for efficient and flexible modding experiences.</p>
+          <h3>Documentation</h3>
+          <ul class="documentation-list-one">
+            <li><a href="#" data-mod="fsMod">fsMod</a></li>
+            <li><a href="#" data-mod="MedicalResources">Medical Resources</a></li>
+            <li><a href="#" data-mod="NerdsAlert-Legacy">NerdsAlert Legacy</a></li>
+            <li><a href="#" data-mod="NerdsAlert-OG">NerdsAlert O.G</a></li>
+            <li><a href="#" data-mod="WorldD">WorldD</a></li>
+          </ul>
         </div>
-        <div class="subsection">
-          <h3>Faster Loading with Fabric</h3>
-          <p>Fabric's optimized loading system enables faster loading times when using Fabric mods, enhancing your
-            gameplay experience.</p>
+        <div class="subsection" id="fsModDetails">
+          <h3 id="modDocumentationHeader"></h3>
+          <ul class="mod-details-list-one">
+            <!-- Content will be dynamically added here -->
+          </ul>
         </div>
-        <div class="subsection">
-          <h3>Support for Various Mods</h3>
-          <p>Fabric supports a wide range of mods developed by the community, providing you with numerous options to
-            enhance your Minecraft gameplay.</p>
+        <div class="subsection" id="modDetailsContent">
+          <h3></h3>
+          <ul class="mod-details-list-one">
+            <!-- Content will be dynamically added here -->
+          </ul>
+        </div>
+        <div class="subsection" id="modDetailsContentAnswer">
+          <h3></h3>
+          <ul class="mod-details-list-one">
+            <!-- Content will be dynamically added here -->
+          </ul>
         </div>
       </div>
+    </section>
+
+    <section class="section" style="margin-top: 10px;">
+      <h2>Fabric Mods</h2>
+      <p>To use Fabric mods, follow these steps:</p>
+      <ol>
+        <li>Install the Fabric Loader <a href="https://fabricmc.net/" target="_blank">here</a>.</li>
+        <li>Additionally, you need to install the Fabric API. Download the Fabric API from <a
+            href="https://modrinth.com/mod/fabric-api" target="_blank">here</a>.</li>
+      </ol>
+      <p>Note: Fabric mods are compatible with quilt. <a href="https://quiltmc.org/en/about/" target="_blank">Learn more
+          about
+          quilt</a>.</p>
+
 
       <div class="downloadable-mods">
-
         <div class="card-container">
           <div class="mod-card" onclick="openPopup('fsMod')">
             <div class="mod-info">
@@ -146,7 +171,6 @@
             <div class="mod-status">New</div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -154,24 +178,6 @@
       <h2>Forge Mods</h2>
       <p>To use Forge mods, you need to install the Forge mod loader. You can download Forge from <a
           href="https://files.minecraftforge.net/">here</a>.</p>
-
-      <div class="subsections">
-        <div class="subsection">
-          <h3>Extensive Modding Support</h3>
-          <p>Forge provides extensive modding support, allowing developers to create and customize mods using a wide
-            range of features and APIs.</p>
-        </div>
-        <div class="subsection">
-          <h3>Large Modding Community</h3>
-          <p>Forge has a large and active modding community, offering a vast selection of mods to enhance your Minecraft
-            experience.</p>
-        </div>
-        <div class="subsection">
-          <h3>Compatibility with Legacy Mods</h3>
-          <p>Forge ensures compatibility with many legacy mods, allowing you to continue using your favorite mods from
-            previous Minecraft versions.</p>
-        </div>
-      </div>
 
       <div class="downloadable-mods">
 
@@ -497,6 +503,7 @@
   <div class="debug-warning" id="debugWarning">
     Warning: This website may contain bugs because you are not visiting on a desktop device.
   </div>
+  <script src="documentation.js"></script>
   <script src="app.js"></script>
 </body>
 
