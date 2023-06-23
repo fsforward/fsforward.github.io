@@ -1,120 +1,126 @@
-// Get references to the necessary elements
-const documentationLinks = document.querySelectorAll('.documentation-list-one a');
-const modDocumentationHeader = document.getElementById('modDocumentationHeader');
-const modDetailsList = document.querySelector('#fsModDetails .mod-details-list-one');
-const modDetailsContent = document.getElementById('modDetailsContent');
-const modDetailsContentAnswer = document.getElementById('modDetailsContentAnswer');
+var selectedMod = ''; // Variable to store the selected mod name
+var selectedTopic = ''; // Variable to store the selected topic name
 
-// Create an array to store the link names
-const linkNames = ['How to obtain items', 'Recipes', 'Usage Guide'];
+function changeSubheader(linkText, sublinkText) {
+    var subheader = document.getElementById('subsection-subheader');
+    subheader.textContent = linkText + ': ' + sublinkText;
 
-// Sort the link names alphabetically
-linkNames.sort();
+    selectedMod = linkText; // Store the selected mod name
 
-// Add event listeners to the documentation links
-documentationLinks.forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent the default link behavior
+    var subsectionLinks = document.getElementById('subsection-links');
+    subsectionLinks.innerHTML = '';
 
-        // Get the mod name and the clicked link's text content
-        const modName = this.getAttribute('data-mod');
-        const linkText = this.textContent;
+    var sublinks = ['How to obtain items', 'Recipes', 'Usage Guide'];
+    sublinks.sort(); // Sort the sublinks alphabetically
 
-        // Update the header of the second subsection
-        modDocumentationHeader.textContent = modName + ' Documentation';
-
-        // Clear the content of the third and fourth subsections if they contain anything
-        modDetailsContent.innerHTML = '';
-        modDetailsContentAnswer.innerHTML = '';
-
-        // Create a new list for the second subsection
-        modDetailsList.innerHTML = '';
-
-        // Loop through the sorted link names
-        linkNames.forEach(linkName => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = '#';
-            link.textContent = linkName;
-            listItem.appendChild(link);
-            modDetailsList.appendChild(listItem);
-
-            // Add event listener to the new link within the second subsection
-            link.addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent the default link behavior
-
-                // Update the header and content of the third subsection
-                modDetailsContent.innerHTML = '';
-                const thirdSubsectionHeader = document.createElement('h3');
-                thirdSubsectionHeader.textContent = modName + ' ' + linkName;
-                modDetailsContent.appendChild(thirdSubsectionHeader);
-
-                // Clear the content of the fourth subsection if it contains anything
-                modDetailsContentAnswer.innerHTML = '';
-
-                // Update the content in the third and fourth subsections
-                if (modName === 'fsMod') {
-                    if (linkName === 'How to obtain items') {
-                        const links = ['Tin Can', 'Cod Fish Tin Can'];
-                        createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                    } else if (linkName === 'Recipes') {
-                        const links = ['Salmon Fish Tin Can'];
-                        createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                    } else if (linkName === 'Usage Guide') {
-                        const links = ['Pufferfish Tin Can'];
-                        createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                    }
-                } else if (modName === 'MedicalResources') {
-                    if (linkName === 'How to obtain items') {
-                        const links = ['Green Herb'];
-                        createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                    } else if (linkName === 'Recipes') {
-                        const links = ['Bandage'];
-                        createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                    } else if (linkName === 'Usage Guide') {
-                        const links = ['Medkit'];
-                        createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                    }
-                }
-
-                // Add your additional mod conditions and link contents here
-                // else if (modName === 'AnotherMod') {
-                //     if (linkName === 'How to obtain items') {
-                //         const links = ['Link1', 'Link2'];
-                //         createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                //     } else if (linkName === 'Recipes') {
-                //         const links = ['Link3', 'Link4'];
-                //         createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                //     } else if (linkName === 'Usage Guide') {
-                //         const links = ['Link5', 'Link6'];
-                //         createLinksAndParagraphs(modDetailsContent, modDetailsContentAnswer, links);
-                //     }
-                // }
-            });
-        });
+    sublinks.forEach(function (sublink) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = 'javascript:void(0)';
+        a.textContent = sublink;
+        a.onclick = function () {
+            changeThirdSubheader(sublink);
+        };
+        li.appendChild(a);
+        subsectionLinks.appendChild(li);
     });
-});
 
-// Function to create links and paragraphs in the third and fourth subsections
-function createLinksAndParagraphs(subsection3, subsection4, links) {
-    links.forEach(link => {
-        const listItem = document.createElement('li');
-        const linkElement = document.createElement('a');
-        linkElement.href = '#';
-        linkElement.textContent = link;
-        listItem.appendChild(linkElement);
-        subsection3.appendChild(listItem);
+    // Clear third and fourth subsections
+    var thirdSubheader = document.getElementById('third-subsection-subheader');
+    thirdSubheader.textContent = '';
+    var thirdSubsectionLinks = document.getElementById('third-subsection-links');
+    thirdSubsectionLinks.innerHTML = '';
+    var fourthSubsectionSubheader = document.getElementById('fourth-subsection-subheader');
+    fourthSubsectionSubheader.textContent = '';
+    var fourthSubsectionContent = document.getElementById('fourth-subsection-content');
+    fourthSubsectionContent.textContent = '';
+}
 
-        linkElement.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default link behavior
+function changeThirdSubheader(sublinkText) {
+    var thirdSubheader = document.getElementById('third-subsection-subheader');
+    thirdSubheader.textContent = selectedMod + ': ' + sublinkText;
 
-            // Clear the content of the fourth subsection if it contains anything
-            subsection4.innerHTML = '';
+    selectedTopic = sublinkText; // Store the selected topic name
 
-            // Update the content in the fourth subsection
-            const paragraph = document.createElement('p');
-            paragraph.textContent = 'Replace this with the actual content for ' + link;
-            subsection4.appendChild(paragraph);
-        });
+    var thirdSubsectionLinks = document.getElementById('third-subsection-links');
+    thirdSubsectionLinks.innerHTML = '';
+
+    var sublinks = [];
+
+    if (selectedMod === 'fsMod') {
+        if (selectedTopic === 'How to obtain items') {
+            sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
+        } else if (selectedTopic === 'Recipes') {
+            sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
+        } else if (selectedTopic === 'Usage Guide') {
+            sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
+        }
+    } else if (selectedMod === 'Medical Resources') {
+        if (selectedTopic === 'How to obtain items') {
+            sublinks = ['Green Herb'];
+        } else if (selectedTopic === 'Recipes') {
+            sublinks = ['Bandage'];
+        } else if (selectedTopic === 'Usage Guide') {
+            sublinks = ['Medkit'];
+        }
+    }
+
+    sublinks.sort(); // Sort the sublinks alphabetically
+
+    sublinks.forEach(function (sublink) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = 'javascript:void(0)';
+        a.textContent = sublink;
+        a.onclick = function () {
+            changeFourthSubsection(sublink);
+        };
+        li.appendChild(a);
+        thirdSubsectionLinks.appendChild(li);
     });
+
+    // Clear fourth subsection
+    var fourthSubsectionSubheader = document.getElementById('fourth-subsection-subheader');
+    fourthSubsectionSubheader.textContent = '';
+    var fourthSubsectionContent = document.getElementById('fourth-subsection-content');
+    fourthSubsectionContent.textContent = '';
+}
+
+function changeFourthSubsection(content) {
+    var fourthSubsectionSubheader = document.getElementById('fourth-subsection-subheader');
+    var fourthSubsectionContent = document.getElementById('fourth-subsection-content');
+
+    if (selectedMod === 'fsMod' && selectedTopic === 'How to obtain items') {
+        fourthSubsectionSubheader.textContent = selectedMod + ': How to obtain ' + content;
+        if (content === 'Tin Can') {
+            fourthSubsectionContent.textContent = 'Tin Can can be crafted with 5 iron ingots.';
+        } else if (content === 'Cod Fish Tin Can') {
+            fourthSubsectionContent.textContent = 'Cod Fish Tin Can can be obtained by fishing in specific areas.';
+        }
+    } else if (selectedMod === 'fsMod' && selectedTopic === 'Recipes') {
+        fourthSubsectionSubheader.textContent = selectedMod + ': Recipe for ' + content;
+        if (content === 'Salmon Fish Tin Can') {
+            fourthSubsectionContent.textContent = 'Salmon Fish Tin Can recipe requires salmon and tin can.';
+        }
+    } else if (selectedMod === 'fsMod' && selectedTopic === 'Usage Guide') {
+        fourthSubsectionSubheader.textContent = selectedMod + ': Usage guide for ' + content;
+        if (content === 'Pufferfish Tin Can') {
+            fourthSubsectionContent.textContent = 'Pufferfish Tin Can can be used as a potion ingredient.';
+        }
+    } else if (selectedMod === 'Medical Resources' && selectedTopic === 'How to obtain items') {
+        fourthSubsectionSubheader.textContent = selectedMod + ': How to obtain ' + content;
+        if (content === 'Green Herb') {
+            fourthSubsectionContent.textContent = 'Green Herb can be found by foraging in forests.';
+        }
+    } else if (selectedMod === 'Medical Resources' && selectedTopic === 'Recipes') {
+        fourthSubsectionSubheader.textContent = selectedMod + ': Recipe for ' + content;
+        if (content === 'Bandage') {
+            fourthSubsectionContent.textContent = 'Bandage can be crafted with cloth and medicinal herbs.';
+        }
+    } else if (selectedMod === 'Medical Resources' && selectedTopic === 'Usage Guide') {
+        fourthSubsectionSubheader.textContent = selectedMod + ': Usage guide for ' + content;
+        if (content === 'Medkit') {
+            fourthSubsectionContent.textContent = 'Right-click to use the Medkit and restore health.';
+        }
+    }
 }
