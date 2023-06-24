@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    /* min-height: 100vh; */
     font-family: Arial, sans-serif;
-    height: 150vh;
     background-color: #fff;
 }
 
@@ -120,7 +120,6 @@ body {
     height: 100%;
     background-color: pink;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
-    /* Add shadow to the right side */
     transition: left 0.3s ease;
     z-index: 99;
 }
@@ -144,9 +143,6 @@ body {
     color: palevioletred;
 }
 
-/* custom-styles.css */
-
-/* Main Section */
 .minecraft-section,
 main {
     width: 80%;
@@ -155,16 +151,13 @@ main {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Instructions Section */
 .main-section {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
     min-height: 0;
-    /* Remove the bottom margin */
 }
 
-/* Instructions Section */
 .content {
     height: 0;
     overflow: hidden;
@@ -181,12 +174,9 @@ main {
     justify-content: space-between;
     cursor: pointer;
     background-color: #ff69b4;
-    /* Set header background color */
     color: white;
-    /* Set header text color */
     padding: 10px;
     margin-bottom: 0;
-    /* Remove margin-bottom to remove the gap */
     border-radius: 5px;
     height: 20px;
 }
@@ -195,18 +185,11 @@ main {
     transition: transform 0.5s ease;
 }
 
-.slideButton .bx-chevron-down {
-    transition: transform 0.5s ease;
-}
-
-
-/* Subsection */
 .subsection {
     flex: 1 1 300px;
     margin: 0 10px;
     margin-bottom: 20px;
     border: 1px solid pink;
-    /* background-color: rgba(255, 255, 255, 0.5); */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -214,7 +197,6 @@ main {
     color: #777;
 }
 
-/* Subsection Header */
 .subsection-header {
     background-color: #ff69b4;
     color: white;
@@ -222,7 +204,6 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Subsection Content */
 .subsection-content {
     padding: 20px;
 }
@@ -254,7 +235,6 @@ main {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
 }
 
 .left-div {
@@ -262,9 +242,6 @@ main {
     height: 300px;
     flex-grow: 1;
     min-width: 300px;
-    /* border: 1px solid pink; */
-    /* border-right: 1px solid pink; */
-    /* background-color: #fff; */
     color: #777;
     padding: 10px;
 }
@@ -277,7 +254,6 @@ main {
 
 .spacer {
     flex-grow: 1;
-    /* Create a flexible space to push the other buttons to the right */
 }
 
 .type-button,
@@ -300,20 +276,11 @@ main {
 .right-div {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
     width: 260px;
     height: 320px;
     margin: auto;
-    /* margin-right: 10px; */
-    /* Updated margin property */
-    /* border: 1px solid pink; */
     overflow-y: auto;
-    /* text-align: center; */
-    /* Added text-align property */
 }
-
-
 
 .left-div p {
     margin: 0;
@@ -331,10 +298,8 @@ main {
 .card-container {
     display: flex;
     justify-content: center;
-    /* Center the mod card */
     margin: 10px auto;
 }
-
 
 .mod-card {
     display: flex;
@@ -411,7 +376,7 @@ main {
 }
 
 #slider {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     width: 50px;
@@ -455,11 +420,10 @@ main {
     margin-left: 10px;
 }
 
-
 #background {
     width: 100%;
     height: 100%;
-    background: url(Images/Background-White.png) no-repeat center center fixed;
+    background: url(Images/Background.jpg) no-repeat center center fixed;
     background-size: cover;
     transition: 0.5s;
 }
@@ -467,9 +431,70 @@ main {
 #background.hide {
     width: 100%;
     height: 100%;
-    background: url(Images/Background.jpg) no-repeat center center fixed;
+    background: url(Images/Background-White.png) no-repeat center center fixed;
     background-size: cover;
     transition: 0.5s;
+}
+
+.wrapper {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: pink;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.social-icons .icon i {
+    color: white;
+}
+
+.legacy-button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.legacy-button {
+    background-color: white;
+    color: #ff80bf;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.legacy-button:hover {
+    background-color: #f2f2f2;
 }
 
 

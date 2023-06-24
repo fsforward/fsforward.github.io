@@ -21,8 +21,8 @@ function toggleSidebar() {
     } else {
         sidebar.style.left = '-200px';
     }
-    var menuIcon = document.querySelector('.menu-icon');
 
+    var menuIcon = document.querySelector('.menu-icon');
     menuIcon.classList.toggle('active');
 }
 
@@ -53,8 +53,8 @@ function toggleSlide() {
 }
 
 function toggleSlider() {
-    const slider = document.getElementById("slider");
-    const background = document.getElementById("background");
+    var slider = document.getElementById("slider");
+    var background = document.getElementById("background");
 
     slider.classList.toggle("on");
     background.classList.toggle("hide");
