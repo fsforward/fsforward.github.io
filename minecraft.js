@@ -3,20 +3,32 @@ let activeVersion = 'All Versions';
 
 // Function to filter mod cards by mod type and version
 function filterMods() {
-  const modCards = document.querySelectorAll('.mod-card');
+  const modContainers = document.querySelectorAll('.card-container');
 
-  modCards.forEach(function(card) {
-    const modContent = card.querySelector('.mod-details');
-    const modText = modContent.textContent;
-    const modVersion = modContent.querySelector('p:nth-child(2)').textContent;
+  modContainers.forEach(function(container) {
+    const modCards = container.querySelectorAll('.mod-card');
+    let isVisibleContainer = false;
 
-    // Check if the mod card matches the mod type and version
-    const isVisible =
-      (activeModType === 'All' || modText.includes(activeModType)) &&
-      (activeVersion === 'All Versions' || modVersion.includes(activeVersion));
+    modCards.forEach(function(card) {
+      const modContent = card.querySelector('.mod-details');
+      const modText = modContent.textContent;
+      const modVersion = modContent.querySelector('p:nth-child(2)').textContent;
 
-    // Toggle visibility based on mod type and version
-    card.style.display = isVisible ? 'block' : 'none';
+      // Check if the mod card matches the mod type and version
+      const isVisible =
+        (activeModType === 'All' || modText.includes(activeModType)) &&
+        (activeVersion === 'All Versions' || modVersion.includes(activeVersion));
+
+      // Toggle visibility based on mod type and version
+      card.style.display = isVisible ? 'block' : 'none';
+
+      if (isVisible) {
+        isVisibleContainer = true;
+      }
+    });
+
+    // Toggle visibility of the container based on card visibility
+    container.style.display = isVisibleContainer ? 'block' : 'none';
   });
 }
 

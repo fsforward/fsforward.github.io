@@ -51,3 +51,11 @@ function toggleSlide() {
         chevronIcon.style.transform = 'rotate(0deg)';
     }
 }
+
+function toggleSlider() {
+    const slider = document.getElementById("slider");
+    const background = document.getElementById("background");
+
+    slider.classList.toggle("on");
+    background.classList.toggle("hide");
+}
