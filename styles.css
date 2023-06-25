@@ -411,6 +411,51 @@ main {
     color: #ff69b4;
 }
 
+.face-button {
+    --accent-color: #FF69B4;
+    --background-color: #FFF;
+    --text-color: #FF69B4;
+    --hover-background-color: #FF69B4;
+    --hover-text-color: #FFF;
+    --transition-duration: 0.4s;
+
+    min-width: 200px;
+    height: 40px;
+    display: inline-block;
+    border: 3px solid var(--accent-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    overflow: hidden;
+    margin: 5px;
+}
+
+.face-button .icon {
+    margin-right: 6px;
+}
+
+.face-primary,
+.face-secondary {
+    display: block;
+    padding: 12px 0;
+    line-height: var(--height);
+    transition: margin var(--transition-duration);
+}
+
+.face-primary {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.face-button:hover .face-primary {
+    margin-top: -40px;
+    background-color: var(--hover-background-color);
+    color: var(--hover-text-color);
+}
+
 #slider {
     position: absolute;
     bottom: 20px;
@@ -461,7 +506,20 @@ main {
     height: 100%;
     background: url(Images/Background.jpg) no-repeat center center fixed;
     background-size: cover;
+    animation: scrollBackground 20s linear infinite;
     transition: 0.5s;
+}
+
+@keyframes scrollBackground {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 50%;
+    }
 }
 
 #background.hide {

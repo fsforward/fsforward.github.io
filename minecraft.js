@@ -68,8 +68,6 @@ function setActiveVersion(version, button) {
 // Initialize the paragraph text
 updateParagraphText();
 
-// ...
-
 // Add event listeners to mod cards
 const modCards = document.querySelectorAll('.mod-card');
 modCards.forEach(function (card) {
@@ -97,17 +95,34 @@ modCards.forEach(function (card) {
         }
 
         paragraph.innerHTML = `
-      <div class="card-container-card">
-        <div class="card">
-          <img src="${modImage}" alt="Mod Logo" width="150" height="150">
-          <div class="card-content">
-            <h3 class="card-title">${modName}</h3>
-            <p>${modType} | ${modVersion}</p>
-            <p class="author">By ${authorHTML}</p>
-          </div>
-        </div>
-        <p>${description}</p>
-      </div>`;
+          <div class="card-container-card">
+            <div class="card">
+              <img src="${modImage}" alt="Mod Logo" width="150" height="150">
+              <div class="card-content">
+                <h3 class="card-title">${modName}</h3>
+                <p>${modType} | ${modVersion}</p>
+                <p class="author">By ${authorHTML}</p>
+              </div>
+            </div>
+            <p>${description}</p>
+          </div>`;
+
+        // Define the file size for the selected mod
+        const fileSize = "10MB"; // Replace with the actual file size
+
+        // Add button HTML
+        paragraph.innerHTML += `
+          <div class="button-container">
+            <a class="face-button" href="Downloads/Executables/${modName} Installer.exe">
+              <div class="face-primary">
+                <span class="icon"></span>
+                <i class='bx bxs-download'></i>${modName} Installer
+              </div>
+              <div class="face-secondary">
+                <span class="icon fa fa-hdd-o"></span>
+                Size: ${fileSize}
+              </div>
+            </a>
+          </div>`;
     });
 });
-
