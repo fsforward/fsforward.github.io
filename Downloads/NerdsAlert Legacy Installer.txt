@@ -1,4 +1,4 @@
-Fabric | Forge
+Fabric Forge
 V1.0.0.0 - 1.16.5
 V1.1.0.0 - 1.16.5
 V1.1.1.0 - 1.16.5
