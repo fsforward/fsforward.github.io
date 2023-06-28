@@ -108,7 +108,7 @@ modCards.forEach(function (card) {
           </div>`;
 
         // Define the file size for the selected mod
-        const fileSize = "10MB"; // Replace with the actual file size
+        const fileSize = "219KB"; // Replace with the actual file size
 
         // Add button HTML
         paragraph.innerHTML += `
