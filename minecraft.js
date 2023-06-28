@@ -101,7 +101,7 @@ modCards.forEach(function (card) {
               <div class="card-content">
                 <h3 class="card-title">${modName}</h3>
                 <p>${modType} | ${modVersion}</p>
-                <p class="author">By ${authorHTML}</p>
+                <p class="author">${authorHTML}</p>
               </div>
             </div>
             <p>${description}</p>
