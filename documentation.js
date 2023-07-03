@@ -47,7 +47,7 @@ function changeThirdSubheader(sublinkText) {
 
     var sublinks = [];
 
-    if (selectedMod === 'fsMod') {
+    if (selectedMod === 'fsFoodMod') {
         if (selectedTopic === 'How to obtain items') {
             sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
         } else if (selectedTopic === 'Recipes') {
@@ -55,15 +55,7 @@ function changeThirdSubheader(sublinkText) {
         } else if (selectedTopic === 'Usage Guide') {
             sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
         }
-    } else if (selectedMod === 'Medical Resources') {
-        if (selectedTopic === 'How to obtain items') {
-            sublinks = ['Green Herb'];
-        } else if (selectedTopic === 'Recipes') {
-            sublinks = ['Bandage'];
-        } else if (selectedTopic === 'Usage Guide') {
-            sublinks = ['Medkit'];
-        }
-    }
+    } 
 
     sublinks.sort(); // Sort the sublinks alphabetically
 
@@ -90,37 +82,22 @@ function changeFourthSubsection(content) {
     var fourthSubsectionSubheader = document.getElementById('fourth-subsection-subheader');
     var fourthSubsectionContent = document.getElementById('fourth-subsection-content');
 
-    if (selectedMod === 'fsMod' && selectedTopic === 'How to obtain items') {
+    if (selectedMod === 'fsFoodMod' && selectedTopic === 'How to obtain items') {
         fourthSubsectionSubheader.textContent = selectedMod + ': How to obtain ' + content;
         if (content === 'Tin Can') {
             fourthSubsectionContent.textContent = 'Tin Can can be crafted with 5 iron ingots.';
         } else if (content === 'Cod Fish Tin Can') {
             fourthSubsectionContent.textContent = 'Cod Fish Tin Can can be obtained by fishing in specific areas.';
         }
-    } else if (selectedMod === 'fsMod' && selectedTopic === 'Recipes') {
+    } else if (selectedMod === 'fsFoodMod' && selectedTopic === 'Recipes') {
         fourthSubsectionSubheader.textContent = selectedMod + ': Recipe for ' + content;
         if (content === 'Salmon Fish Tin Can') {
             fourthSubsectionContent.textContent = 'Salmon Fish Tin Can recipe requires salmon and tin can.';
         }
-    } else if (selectedMod === 'fsMod' && selectedTopic === 'Usage Guide') {
+    } else if (selectedMod === 'fsFoodMod' && selectedTopic === 'Usage Guide') {
         fourthSubsectionSubheader.textContent = selectedMod + ': Usage guide for ' + content;
         if (content === 'Pufferfish Tin Can') {
             fourthSubsectionContent.textContent = 'Pufferfish Tin Can can be used as a potion ingredient.';
-        }
-    } else if (selectedMod === 'Medical Resources' && selectedTopic === 'How to obtain items') {
-        fourthSubsectionSubheader.textContent = selectedMod + ': How to obtain ' + content;
-        if (content === 'Green Herb') {
-            fourthSubsectionContent.textContent = 'Green Herb can be found by foraging in forests.';
-        }
-    } else if (selectedMod === 'Medical Resources' && selectedTopic === 'Recipes') {
-        fourthSubsectionSubheader.textContent = selectedMod + ': Recipe for ' + content;
-        if (content === 'Bandage') {
-            fourthSubsectionContent.textContent = 'Bandage can be crafted with cloth and medicinal herbs.';
-        }
-    } else if (selectedMod === 'Medical Resources' && selectedTopic === 'Usage Guide') {
-        fourthSubsectionSubheader.textContent = selectedMod + ': Usage guide for ' + content;
-        if (content === 'Medkit') {
-            fourthSubsectionContent.textContent = 'Right-click to use the Medkit and restore health.';
         }
     }
 }

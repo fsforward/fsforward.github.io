@@ -82,16 +82,8 @@ modCards.forEach(function (card) {
 
         // Define specific descriptions for each mod
         let description = '';
-        if (modName === 'fsMod') {
-            description = 'HI';
-        } else if (modName === 'WorldD') {
-            description = 'THIS IS A MOD';
-        } else if (modName === 'Medical Resources') {
-            description = 'Pinguin!';
-        } else if (modName === 'NerdsAlert Legacy') {
-            description = 'Oops!';
-        } else if (modName === 'NerdsAlert O.G') {
-            description = 'WHAT THE ****';
+        if (modName === 'fsFood Mod') {
+            description = 'Embark on a delectable journey with my debut Fabric mod, a tantalizing addition that introduces a delightful array of culinary creations! Prepare to satisfy your virtual taste buds as this mod unveils a collection of delectable food items, carefully crafted to enhance your Minecraft experience. From mouthwatering dishes to succulent treats, immerse yourself in a world of gastronomic wonders with this exceptional mod!';
         }
 
         paragraph.innerHTML = `
