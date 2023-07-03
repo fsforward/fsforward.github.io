@@ -10,7 +10,7 @@ function changeSubheader(linkText, sublinkText) {
     var subsectionLinks = document.getElementById('subsection-links');
     subsectionLinks.innerHTML = '';
 
-    var sublinks = ['How to obtain items', 'Recipes', 'Usage Guide'];
+    var sublinks = ['Recipes', 'Usage Guide'];
     sublinks.sort(); // Sort the sublinks alphabetically
 
     sublinks.forEach(function (sublink) {
@@ -48,12 +48,10 @@ function changeThirdSubheader(sublinkText) {
     var sublinks = [];
 
     if (selectedMod === 'fsFoodMod') {
-        if (selectedTopic === 'How to obtain items') {
-            sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
-        } else if (selectedTopic === 'Recipes') {
+        if (selectedTopic === 'Recipes') {
             sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
         } else if (selectedTopic === 'Usage Guide') {
-            sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
+            sublinks = ['Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
         }
     } 
 
