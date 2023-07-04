@@ -143,8 +143,10 @@ function clearSubsection(subsection) {
   var subheader = document.getElementById(subsection + '-subsection-subheader');
   subheader.textContent = '';
 
-  var subsectionContent = document.getElementById(subsection + '-subsection-content');
-  subsectionContent.textContent = '';
+  try {
+    var subsectionContent = document.getElementById(subsection + '-subsection-content');
+    subsectionContent.textContent = '';
+  } catch { }
 
   var subsectionLinks = document.getElementById(subsection + '-subsection-links');
   subsectionLinks.innerHTML = '';
