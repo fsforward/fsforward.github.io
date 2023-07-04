@@ -10,7 +10,7 @@ function changeSubheader(linkText, sublinkText) {
     var subsectionLinks = document.getElementById('subsection-links');
     subsectionLinks.innerHTML = '';
 
-    var sublinks = ['Recipes', 'Usage Guide'];
+    var sublinks = ['How To Obtain', 'Recipes', 'Usage Guide'];
     sublinks.sort(); // Sort the sublinks alphabetically
 
     sublinks.forEach(function (sublink) {
@@ -48,10 +48,12 @@ function changeThirdSubheader(sublinkText) {
     var sublinks = [];
 
     if (selectedMod === 'fsFoodMod') {
-        if (selectedTopic === 'Recipes') {
-            sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
+        if (selectedTopic === 'How To Obtain') {
+            sublinks = ['Watered Tin Can'];
+        } else if (selectedTopic === 'Recipes') {
+            sublinks = ['Tin Can', 'Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can', 'Sweet Berries Soup'];
         } else if (selectedTopic === 'Usage Guide') {
-            sublinks = ['Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can'];
+            sublinks = ['Pufferfish Tin Can', 'Cod Fish Tin Can', 'Salmon Fish Tin Can', 'Tropical Fish Tin Can', 'Sweet Berries Soup'];
         }
     } 
 
@@ -76,26 +78,49 @@ function changeThirdSubheader(sublinkText) {
     fourthSubsectionContent.textContent = '';
 }
 
-function changeFourthSubsection(content) {
+// Mapping of content to image paths
+var imagePaths = {
+    'Tin Can': 'Images/Documentation/fsFood%20Mod/tin_can.png',
+    'Pufferfish Tin Can': 'Images/Documentation/fsFood%20Mod/pufferfish_tin_can.png',
+    'Cod Fish Tin Can': 'Images/Documentation/fsFood%20Mod/cod_fish_tin_can.png',
+    'Salmon Fish Tin Can': 'Images/Documentation/fsFood%20Mod/salmon_fish_tin_can.png',
+    'Tropical Fish Tin Can': 'Images/Documentation/fsFood%20Mod/tropical_fish_tin_can.png',
+    'Sweet Berries Soup': 'Images/Documentation/fsFood%20Mod/sweet_berries_soup.png'
+  };
+  
+  function changeFourthSubsection(content) {
     var fourthSubsectionSubheader = document.getElementById('fourth-subsection-subheader');
     var fourthSubsectionContent = document.getElementById('fourth-subsection-content');
-
-    if (selectedMod === 'fsFoodMod' && selectedTopic === 'How to obtain items') {
-        fourthSubsectionSubheader.textContent = selectedMod + ': How to obtain ' + content;
-        if (content === 'Tin Can') {
-            fourthSubsectionContent.textContent = 'Tin Can can be crafted with 5 iron ingots.';
-        } else if (content === 'Cod Fish Tin Can') {
-            fourthSubsectionContent.textContent = 'Cod Fish Tin Can can be obtained by fishing in specific areas.';
+  
+    fourthSubsectionSubheader.textContent = selectedMod + ': ' + selectedTopic + ' ' + content;
+  
+    if (selectedMod === 'fsFoodMod') {
+      if (selectedTopic === 'How To Obtain') {
+        if (content === 'Watered Tin Can') {
+          fourthSubsectionContent.textContent = 'Watered Tin Can can be obtained by right-clicking water with a Tin Can. (Make sure it\'s a source block)';
         }
-    } else if (selectedMod === 'fsFoodMod' && selectedTopic === 'Recipes') {
-        fourthSubsectionSubheader.textContent = selectedMod + ': Recipe for ' + content;
-        if (content === 'Salmon Fish Tin Can') {
-            fourthSubsectionContent.textContent = 'Salmon Fish Tin Can recipe requires salmon and tin can.';
+      } else if (selectedTopic === 'Recipes') {
+        var imagePath = imagePaths[content];
+        if (imagePath) {
+          insertImage(imagePath);
         }
-    } else if (selectedMod === 'fsFoodMod' && selectedTopic === 'Usage Guide') {
-        fourthSubsectionSubheader.textContent = selectedMod + ': Usage guide for ' + content;
+      } else if (selectedTopic === 'Usage Guide') {
         if (content === 'Pufferfish Tin Can') {
-            fourthSubsectionContent.textContent = 'Pufferfish Tin Can can be used as a potion ingredient.';
+          fourthSubsectionContent.textContent = 'Pufferfish Tin Can can be used as a potion ingredient.';
         }
+      }
     }
-}
+  }
+  
+  function insertImage(imagePath) {
+    var fourthSubsectionContent = document.getElementById('fourth-subsection-content');
+    fourthSubsectionContent.innerHTML = '';
+  
+    var img = document.createElement('img');
+    img.src = imagePath;
+    img.width = 300;
+    img.style.display = 'block';
+    img.style.margin = '0 auto';
+  
+    fourthSubsectionContent.appendChild(img);
+  }
