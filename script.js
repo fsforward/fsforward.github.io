@@ -1,61 +1,65 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var isNotDesktop = !window.matchMedia('(pointer: fine)').matches;
-    var logoImg = document.getElementById('logo-img');
-    var menuIcon = document.querySelector('.menu-icon');
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".sidebar ul li a");
+    const sections = document.querySelectorAll("main section");
+    const toggleButton = document.querySelector(".toggle-button");
+    const sidebar = document.querySelector(".sidebar");
 
-    if (isNotDesktop) {
-        logoImg.style.display = 'none';
-        menuIcon.style.display = 'block';
-    } else {
-        logoImg.style.display = 'block';
-        menuIcon.style.display = 'none';
-    }
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetSection = this.getAttribute("data-section");
+            
+            links.forEach(link => link.classList.remove("active"));
+            sections.forEach(section => section.classList.remove("shown"));
+
+            this.classList.add("active");
+            document.querySelector(`.${targetSection}`).classList.add("shown");
+        });
+    });
+
+    toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+    });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".sidebar ul li a");
+    const sections = document.querySelectorAll("main section");
+    const toggleButton = document.querySelector(".toggle-button");
+    const sidebar = document.querySelector(".sidebar");
+
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetSection = this.getAttribute("data-section");
+            
+            links.forEach(link => link.classList.remove("active"));
+            sections.forEach(section => section.classList.remove("shown"));
+
+            this.classList.add("active");
+            document.querySelector(`.${targetSection}`).classList.add("shown");
+        });
+    });
+
+    toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+    });
+});
+
+function isMobileWithoutPointer() {
+    return matchMedia('(hover: none) and (pointer: coarse)').matches;
+}
+
 function toggleSidebar() {
-    var sidebar = document.querySelector('.sidebar');
-    var sidebarLeft = window.getComputedStyle(sidebar).getPropertyValue('left');
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('collapsed');
+}
 
-    if (sidebarLeft === '-200px') {
-        sidebar.style.left = '0';
-    } else {
-        sidebar.style.left = '-200px';
+document.addEventListener('DOMContentLoaded', function () {
+    if (isMobileWithoutPointer()) {
+        toggleSidebar();
     }
 
-    var menuIcon = document.querySelector('.menu-icon');
-    menuIcon.classList.toggle('active');
-}
-
-var slideButtons = document.getElementsByClassName('slideButton');
-var contents = document.getElementsByClassName('content');
-
-for (var i = 0; i < slideButtons.length; i++) {
-    slideButtons[i].addEventListener('click', toggleSlide);
-}
-
-function toggleSlide() {
-    var content = this.nextElementSibling;
-    var chevronIcon = this.querySelector('.bx-chevron-down');
-
-    if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        setTimeout(function () {
-            content.style.height = content.scrollHeight + 'px';
-        }, 10);
-        chevronIcon.style.transform = 'rotate(180deg)';
-    } else {
-        content.style.height = '0';
-        setTimeout(function () {
-            content.classList.add('hidden');
-        }, 500);
-        chevronIcon.style.transform = 'rotate(0deg)';
-    }
-}
-
-function toggleSlider() {
-    var slider = document.getElementById("slider");
-    var background = document.getElementById("background");
-
-    slider.classList.toggle("on");
-    background.classList.toggle("hide");
-}
+    const toggleButton = document.querySelector('.toggle-button');
+    toggleButton.addEventListener('click', toggleSidebar);
+});
