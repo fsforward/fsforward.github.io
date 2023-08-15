@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.add("active");
             document.querySelector(`.${targetSection}`).classList.add("shown");
 
-            if (!isDesktop) {
+            if (isDesktop) {
                 // Collapse the sidebar
                 sidebar.classList.add("collapsed");
             }
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.toggle("collapsed");
     });
 
-    if (!isDesktop) {
+    if (isDesktop) {
         sidebar.classList.add("collapsed");
     }
 });
