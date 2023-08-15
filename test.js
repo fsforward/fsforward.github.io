@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("main section");
     const toggleButton = document.querySelector(".toggle-button");
     const sidebar = document.querySelector(".sidebar");
-    let startX = null;
 
     links.forEach(link => {
         link.addEventListener("click", function (event) {
@@ -15,37 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             this.classList.add("active");
             document.querySelector(`.${targetSection}`).classList.add("shown");
-
-            // Collapse the sidebar
-            sidebar.classList.add("collapsed");
         });
     });
 
     toggleButton.addEventListener("click", function () {
         sidebar.classList.toggle("collapsed");
     });
-
-    sidebar.addEventListener("touchstart", function (event) {
-        startX = event.touches[0].clientX;
-    });
-
-    sidebar.addEventListener("touchmove", function (event) {
-        if (startX === null) {
-            return;
-        }
-
-        const currentX = event.touches[0].clientX;
-        const deltaX = currentX - startX;
-
-        if (deltaX > 50) {
-            // Open the sidebar
-            sidebar.classList.remove("collapsed");
-        }
-
-        startX = null;
-    });
-
-    if (matchMedia('(hover: none) and (pointer: coarse)').matches) {
-        sidebar.classList.add("collapsed");
-    }
 });
