@@ -7,24 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".sidebar");
     const logo = document.querySelector(".logo");
 
-    // Function to set a cookie
-    function setCookie(name, value, days) {
-        const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
-        document.cookie = `${name}=${value}; expires=${expires}; path=/`;
-    }
-
-    // Function to get a cookie
-    function getCookie(name) {
-        const cookies = document.cookie.split('; ');
-        for (const cookie of cookies) {
-            const [cookieName, cookieValue] = cookie.split('=');
-            if (cookieName === name) {
-                return cookieValue;
-            }
-        }
-        return null;
-    }
-
     links.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
@@ -37,12 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(`.${targetSection}`).classList.add("shown");
 
             if (isDesktop) {
+                // Collapse the sidebar
                 sidebar.classList.add("collapsed");
                 logo.classList.add("hidden");
             }
-
-            // Save the selected theme in a cookie
-            setCookie("theme", targetSection, 365); // Save for 1 year
         });
     });
 
@@ -54,14 +34,5 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isDesktop) {
         sidebar.classList.add("collapsed");
         logo.classList.add("hidden");
-    }
-
-    // Apply the saved theme from the cookie
-    const savedTheme = getCookie("theme");
-    if (savedTheme) {
-        const savedLink = document.querySelector(`.sidebar ul li a[data-section="${savedTheme}"]`);
-        if (savedLink) {
-            savedLink.click(); // Trigger a click event to apply the saved theme
-        }
     }
 });
