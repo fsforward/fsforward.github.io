@@ -12,12 +12,18 @@ body {
     display: flex;
     flex-direction: column;
     transition: width 0.1s ease-in-out;
+    max-height: calc(100vh - 69.5px);
+    overflow-y: auto;
 }
 
 .sidebar img {
     align-self: center;
     width: 200px;
     margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 .toggle-button {
@@ -34,7 +40,7 @@ body {
 }
 
 .toggle-button:hover i {
-    color: #e68a1d;
+    color: #ff84d0;
 }
 
 .sidebar.collapsed {
@@ -47,9 +53,10 @@ body {
 
 .sidebar ul {
     list-style-type: none;
-    padding: 20px 0 20px 20px;
+    padding: 0 10px 0 20px;
     transition: opacity 0.3s;
     opacity: 1;
+    margin: 0;
 }
 
 .sidebar.collapsed ul {
@@ -66,11 +73,23 @@ body {
     border-radius: 10px;
     margin: 10px 0;
     font-size: 18px;
+    transition: transform 0.2s ease-in-out;
 }
 
-.sidebar a:hover,
-.sidebar a.active {
+.sidebar a:hover {
     background-color: #232627;
+    box-shadow: inset 0px 0px 2px #a4ceff;
+    transform: scale(.995);
+    transition: transform 0.2s ease-in-out;
+}
+
+.sidebar a.active:hover {
+    box-shadow: inset 0px 0px 2px #1269cc;
+}
+
+.active {
+    background-color: #232627;
+    box-shadow: inset 0px 0px 2px #1269cc;
 }
 
 .wrapper {
@@ -92,6 +111,7 @@ body {
     background-color: #141718;
     color: white;
     text-align: center;
+    font-size: x-small;
 }
 
 .sidebar ul.secondary-links {
@@ -140,7 +160,10 @@ section {
 
 .theme-buttons {
     text-align: center;
-    margin-top: 20px;
+    background-color: #232627;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .theme-button {

@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("main section");
     const toggleButton = document.querySelector(".toggle-button");
     const sidebar = document.querySelector(".sidebar");
+    const logo = document.querySelector(".logo");
 
     links.forEach(link => {
         link.addEventListener("click", function (event) {
@@ -20,15 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
             if (isDesktop) {
                 // Collapse the sidebar
                 sidebar.classList.add("collapsed");
+                logo.classList.add("hidden");
             }
         });
     });
 
     toggleButton.addEventListener("click", function () {
         sidebar.classList.toggle("collapsed");
+        logo.classList.toggle("hidden");
     });
 
     if (isDesktop) {
         sidebar.classList.add("collapsed");
+        logo.classList.add("hidden");
     }
 });
