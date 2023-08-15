@@ -19,8 +19,8 @@ const darkTheme = {
 const applyTheme = (theme) => {
     document.querySelector('main').style.backgroundColor = theme.mainBgColor;
     document.querySelector('main').style.color = theme.textColor;
-    document.querySelectorAll('h2').forEach(h2 => {
-        h2.style.color = theme.headerColor;
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+        heading.style.color = theme.headerColor;
     });
     document.querySelector('.header').style.backgroundColor = theme.headerBgColor;
     document.querySelectorAll('th').forEach(th => {
