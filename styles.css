@@ -21,7 +21,7 @@ body {
 }
 
 .toggle-button {
-    position:fixed;
+    position: fixed;
     top: -5px;
     left: -5px;
     background-color: #141718;
@@ -68,10 +68,7 @@ body {
     font-size: 18px;
 }
 
-.sidebar a:hover {
-    background-color: #232627;
-}
-
+.sidebar a:hover,
 .sidebar a.active {
     background-color: #232627;
 }
@@ -148,17 +145,15 @@ section {
 
 .theme-button {
     padding: 4px 16px;
-    /* Adjust padding for smaller buttons */
     margin: 0 5px;
     font-size: 14px;
     border: none;
     cursor: pointer;
     background-color: #333;
     color: #fff;
-    border: 1px solid #333333;
+    border: 1px solid #333;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Add a shadow box */
     transition: transform 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
@@ -172,13 +167,20 @@ section {
 
 .theme-button:hover {
     transform: scale(1.1);
-    /* Apply scale transformation on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Enhance shadow on hover */
 }
 
 a {
     color: #6fa4e6;
     text-decoration: wavy;
     margin: 0 10px;
+}
+
+span.label {
+    color: #ff6b88;
+    font-size: x-small;
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid #ff6b88;
 }
