@@ -78,18 +78,18 @@ body {
 
 .sidebar a:hover {
     background-color: #232627;
-    box-shadow: inset 0px 0px 2px #a4ceff;
+    box-shadow: inset 0px 0px 2px #ffd3ee;
     transform: scale(.995);
     transition: transform 0.2s ease-in-out;
 }
 
 .sidebar a.active:hover {
-    box-shadow: inset 0px 0px 2px #1269cc;
+    box-shadow: inset 0px 0px 2px #ff84d0;
 }
 
 .active {
     background-color: #232627;
-    box-shadow: inset 0px 0px 2px #1269cc;
+    box-shadow: inset 0px 0px 2px #ff84d0;
 }
 
 .wrapper {
@@ -200,10 +200,10 @@ a {
 }
 
 span.label {
-    color: #ff6b88;
+    color: #ff84d0;
     font-size: x-small;
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 2px;
     border-radius: 10px;
-    border: 1px solid #ff6b88;
+    border: 1px solid #ff84d0;
 }

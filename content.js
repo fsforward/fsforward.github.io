@@ -2,6 +2,7 @@ const lightTheme = {
     mainBgColor: '#f8f8f8',
     textColor: '#333333',
     headerBgColor: '',
+    headerColor: '#ff84d0',
     projectTableHeaderBgColor: '#ff9dbb',
     projectTitleColor: '#ff6b88',
 };
@@ -10,13 +11,17 @@ const darkTheme = {
     mainBgColor: '#333333',
     textColor: '#ffffff',
     headerBgColor: '',
+    headerColor: '#ffffff',
     projectTableHeaderBgColor: '#444444',
-    projectTitleColor: '#ff6b88',
+    projectTitleColor: '#ffffff',
 };
 
 const applyTheme = (theme) => {
     document.querySelector('main').style.backgroundColor = theme.mainBgColor;
     document.querySelector('main').style.color = theme.textColor;
+    document.querySelectorAll('h2').forEach(h2 => {
+        h2.style.color = theme.headerColor;
+    });
     document.querySelector('.header').style.backgroundColor = theme.headerBgColor;
     document.querySelectorAll('th').forEach(th => {
         th.style.backgroundColor = theme.projectTableHeaderBgColor;
