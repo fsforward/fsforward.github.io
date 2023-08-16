@@ -139,6 +139,7 @@ section {
 .project-table {
     width: 100%;
     border-collapse: collapse;
+    white-space: normal;
 }
 
 .project-table th,
