@@ -138,14 +138,14 @@ section {
 
 .project-table {
     width: 100%;
+    margin: 0 auto;
     border-collapse: collapse;
-    white-space: normal;
 }
 
 .project-table th,
 .project-table td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 1px;
     text-align: center;
 }
 
