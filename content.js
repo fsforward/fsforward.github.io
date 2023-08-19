@@ -4,16 +4,16 @@ const lightTheme = {
     headerBgColor: '',
     headerColor: '#ff84d0',
     projectTableHeaderBgColor: '#ff9dbb',
-    projectTitleColor: '#ff6b88',
+    projectTitleColor: '#000000',
 };
 
 const darkTheme = {
     mainBgColor: '#333333',
     textColor: '#ffffff',
     headerBgColor: '',
-    headerColor: '#ffffff',
-    projectTableHeaderBgColor: '#444444',
-    projectTitleColor: '#ffffff',
+    headerColor: '#ff84d0',//#fffff
+    projectTableHeaderBgColor: '#ff9dbb', //#444444
+    projectTitleColor: '#ffffff', //#fffff
 };
 
 const applyTheme = (theme) => {
