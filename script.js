@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     links.forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault();
+            //event.preventDefault();
             const targetSection = this.getAttribute("data-section");
 
             links.forEach(link => link.classList.remove("active"));
