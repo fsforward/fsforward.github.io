@@ -4,8 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
     <title>fsForward</title>
+    <style>
+        body,
+html {
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+overflow: hidden; /* Hide scrollbars */
+background-image: url("media/images/bg.jpg"); /* Set background image */
+background-size: cover; /* Ensure background covers the entire viewport */
+background-position: center; /* Center the background image */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white; /* Text color */
+font-family: Arial, sans-serif; /* Specify font family */
+}
+
+/* Apply the "480p" effect to all elements except the overlay */
+body > *:not(#gif-overlay) {
+filter: blur(2px);
+}
+
+#gif-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 9999; /* Ensure it's on top of everything */
+pointer-events: none; /* Allow interaction with elements behind */
+}
+
+#coming-soon-text,
+#horizontal-line,
+#countdown-text {
+filter: none; /* Remove the filter for these elements */
+}
+
+#coming-soon-text {
+font-size: 36px; /* Adjust font size */
+text-align: center;
+}
+
+#horizontal-line {
+width: 25%; /* Adjust line width */
+border-bottom: 1px solid white; /* Horizontal line style */
+margin: 20px 0; /* Adjust margin */
+}
+
+#countdown-text {
+font-size: 24px; /* Adjust font size */
+text-align: center;
+}
+    </style>
 </head>
 
 <body>
