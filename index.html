@@ -7,13 +7,12 @@
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
     <title>fsForward</title>
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
             height: 100vh;
             width: 100vw;
             overflow: hidden;
-
             /* Hide scrollbars */
             background-image: url("/media/images/bg.png");
             /* Set background image */
@@ -78,14 +77,21 @@
 </head>
 
 <body>
-    <iframe src="https://fsforward.com/media/audio/ambience.mp3" allow="autoplay" style="display:none" id="background-audio"></iframe>
-    <audio id="background-audio" autoplay loop>
-        <source src="/media/audio/ambience.mp3" type="audio/mp3">
-    </audio>
     <div id="coming-soon-text">THANK YOU</div>
     <div id="horizontal-line"></div>
     <div id="countdown-text">see you soon</div>
     <img id="gif-overlay" src="/media/videos/GS.gif" alt="Overlay GIF">
+
+    <audio id="background-audio" loop>
+        <source src="/media/audio/ambience.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        // Function to play the audio after 1 second
+        setTimeout(function () {
+            document.getElementById('background-audio').play();
+        }, 1000);
+    </script>
 </body>
 
 </html>
