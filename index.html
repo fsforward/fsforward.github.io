@@ -15,7 +15,7 @@
             width: 100vw;
 
             /* Hide scrollbars */
-            background-image: url("media/images/bg.jpg");
+            background-image: url("../media/images/bg.jpg");
             /* Set background image */
             background-size: cover;
             /* Ensure background covers the entire viewport */
@@ -32,9 +32,9 @@
         }
 
         /* Apply the "480p" effect to all elements except the overlay */
-        /* body>*:not(#gif-overlay) {
+        body>*:not(#gif-overlay) {
             filter: blur(2px);
-        } */
+        }
 
         #gif-overlay {
             position: fixed;
@@ -80,13 +80,13 @@
 
 <body>
     <audio id="background-audio" autoplay loop>
-        <source src="media/audio/ambience.mp3" type="audio/mpeg">
+        <source src="../media/audio/ambience.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <div id="coming-soon-text">THANK YOU</div>
     <div id="horizontal-line"></div>
     <div id="countdown-text">see you soon</div>
-    <!-- <img id="gif-overlay" src="media/videos/GS.gif" alt="Overlay GIF"> -->
+    <img id="gif-overlay" src="../media/videos/GS.gif" alt="Overlay GIF">
 </body>
 
 </html>
