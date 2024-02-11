@@ -32,7 +32,7 @@
 
         /* Apply the "480p" effect to all elements except the overlay */
         body>*:not(#gif-overlay) {
-            filter: blur(2px);
+            filter: blur(1.5px);
         }
 
         #gif-overlay {
@@ -73,6 +73,43 @@
             /* Adjust font size */
             text-align: center;
         }
+
+        /* Custom modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999; /* Ensure it's on top of everything */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+        }
+
+        .modal-content {
+            background-color: #333333;
+            filter: opacity(75%);
+            font-size: large;
+            margin: 20% auto; /* Center modal vertically and horizontally */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 20%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Close button style */
+        .close {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -82,16 +119,41 @@
     <div id="countdown-text">see you soon</div>
     <img id="gif-overlay" src="/media/videos/GS.gif" alt="Overlay GIF">
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>There is nothing here.</p>
+            <button onclick="playAudio()">Sure</button>
+        </div>
+    </div>
+
     <audio id="background-audio" loop>
         <source src="/media/audio/ambience.mp3" type="audio/mp3">
     </audio>
 
     <script>
-        // Function to play the audio when the popup is dismissed
-        setTimeout(function () {
-            alert('There is nothing here.');
-            document.getElementById('background-audio').play();
-        }, 1000);
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Function to display the modal
+        function displayModal() {
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Function to play the audio
+        function playAudio() {
+            closeModal(); // Close the modal
+            document.getElementById('background-audio').play(); // Play the audio
+        }
+
+        displayModal();
     </script>
 </body>
 
