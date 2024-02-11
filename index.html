@@ -100,7 +100,7 @@
     
                 if (timeDiff < 600) { // If the time between taps is less than 600 milliseconds
                     tapCount++;
-                    if (tapCount === 2) { // If it's the second tap
+                    if (tapCount === 2 && modal.style.display === "none") { // If it's the second tap
                         displayModal2(); // Display second modal
                         tapCount = 0; // Reset tap count
                     }
