@@ -30,12 +30,15 @@ body>*:not(#gif-overlay) {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
     z-index: 9999;
     /* Ensure it's on top of everything */
     pointer-events: none;
     /* Allow interaction with elements behind */
 }
+
 
 #coming-soon-text,
 #horizontal-line,
@@ -99,7 +102,7 @@ body>*:not(#gif-overlay) {
     width: 85%;
     height: 85%;
     text-align: left;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
