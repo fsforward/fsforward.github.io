@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add author
         const author = document.createElement("p");
         author.classList.add("author");
-        author.innerHTML = "사라 환 <i class='bx bx-badge-check'></i>";
+        author.innerHTML = "사라 환<i class='bx bx-badge-check'></i> | <a target='_blank' href='https://www.youtube.com/@WiscaVT'>Wisca</a>";
         content.appendChild(author);
 
         // Add version
