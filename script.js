@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Assume the "downloads" variable contains the list of folders and version numbers in the "downloads" directory
     const downloads = [
-        "fsPNGTuber:V1.1.0",
+        "Conveyor Waffle:v1.0.0-pre-a.1",
         // Add more folder names and version numbers as needed
     ];
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const icon = document.createElement("div");
         icon.classList.add("icon");
         const iconImg = document.createElement("img");
-        iconImg.src = `/media/images/${folder}-${version}.png`; // Adjust path as needed
+        iconImg.src = `/media/images/${folder} - ${version}.png`; // Adjust path as needed
         iconImg.alt = "App Icon";
         iconImg.width = 50;
         icon.appendChild(iconImg);
@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add version
         const versionElement = document.createElement("p");
         versionElement.classList.add("version");
-        versionElement.innerHTML = `<i class='bx bxl-windows'></i> <a href='${folder}.html'>${version}</a>`;
+        versionElement.innerHTML = `<i class='bx bxl-windows'></i> ${version}`;
+        // versionElement.innerHTML = `<i class='bx bxl-windows'></i> <a href='${folder}.${version}</a>`;
         content.appendChild(versionElement);
 
         card.appendChild(content);
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         downloadButton.addEventListener("click", function() {
-            const zipUrl = `downloads/${folder}/release/${folder}-${version}.zip`;
+            const zipUrl = `downloads/${folder}/release/${folder} - ${version}.zip`;
             window.location.href = zipUrl;
         });
     });
