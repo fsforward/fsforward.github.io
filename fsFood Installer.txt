@@ -5,4 +5,4 @@ V1.0.0 - 1.14.2
 Forge {
 V1.0.0 - 0.0.0
 }
-Update: https://fsforward.com/downloads/installers/fsFood%20Installer%20-%20V1.1.0.exe
+Update: https://fsforward.com/downloads/installers/fsFood%20Installer%20-%20V1.2.0.exe
