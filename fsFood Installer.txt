@@ -1,5 +1,6 @@
 Fabric
 Fabric {
 V1.0.0 - 1.14.4
+V1.0.0 - 1.16.5
 }
 Update: https://fsforward.com/downloads/installers/fsFood%20Installer%20-%20V1.0.0.exe
