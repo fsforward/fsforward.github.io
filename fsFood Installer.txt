@@ -1,4 +1,4 @@
-Fabric | Forge
+Fabric
 Fabric {
 V1.0.0 - 1.14.4
 V1.0.0 - 1.15.2
@@ -8,6 +8,5 @@ V1.0.0 - 1.18.2
 V1.0.0 - 1.19.4
 }
 Forge {
-V0.0.0 - TEST
 }
 Update: https://fsforward.com/downloads/installers/fsFood%20Installer%20-%20V1.0.0.exe
