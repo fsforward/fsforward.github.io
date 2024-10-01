@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#countdown {
+    color: pink;
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
