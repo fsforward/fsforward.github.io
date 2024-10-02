@@ -34,7 +34,7 @@ function createDownloadCard(filePath) {
     let gameVersion;
     // Check if the file name contains '-launcher'
     if (fileName.includes('-launcher')) {
-        gameVersion = "Info in launcher | 28mb"; // If it contains -launcher
+        gameVersion = "Info in launcher | 28MB"; // If it contains -launcher
     } else {
         // Get the entire version string (everything between the first hyphen and the last dot)
         gameVersion = nameAndVersion.slice(1).join('-').split('.')[0] + '.' + nameAndVersion.slice(1).join('-').split('.')[1] + '.' + nameAndVersion.slice(1).join('-').split('.')[2];
