@@ -40,6 +40,10 @@ function createDownloadCard(filePath) {
         gameVersion = nameAndVersion.slice(1).join('-').split('.')[0] + '.' + nameAndVersion.slice(1).join('-').split('.')[1] + '.' + nameAndVersion.slice(1).join('-').split('.')[2];
     }
 
+    // Generate the image file path based on the base file name
+    const baseFileName = fileName.split('-')[0]; // Get the base file name before the version or launcher
+    const imagePath = `images/${baseFileName}.jpg`;
+
     // Create card elements
     const card = document.createElement('div');
     card.classList.add('download-card');
@@ -48,7 +52,7 @@ function createDownloadCard(filePath) {
     cardContent.classList.add('card-content');
 
     const gameImage = document.createElement('img');
-    gameImage.src = 'https://via.placeholder.com/50';
+    gameImage.src = imagePath; // Use the generated image path
 
     const info = document.createElement('div');
     info.classList.add('info');
