@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* Hide scrollbars */
+    background-image: url("/media/images/bg.png");
+    /* Set background image */
+    background-size: cover;
+    /* Ensure background covers the entire viewport */
+    background-position: center;
+    /* Center the background image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    /* Text color */
+    font-family: Arial, sans-serif;
+    /* Specify font family */
+}
+
+/* Apply the "480p" effect to all elements except the overlay */
+body>*:not(#gif-overlay) {
+    filter: blur(1.5px);
+}
+
+#gif-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 9999;
+    /* Ensure it's on top of everything */
+    pointer-events: none;
+    /* Allow interaction with elements behind */
+}
+
+
+#coming-soon-text,
+#horizontal-line,
+#countdown-text {
+    filter: none;
+    /* Remove the filter for these elements */
+}
+
+#coming-soon-text {
+    font-size: 36px;
+    /* Adjust font size */
+    text-align: center;
+}
+
+#horizontal-line {
+    width: 25%;
+    /* Adjust line width */
+    border-bottom: 1px solid white;
+    /* Horizontal line style */
+    margin: 20px 0;
+    /* Adjust margin */
+}
+
+#countdown-text {
+    font-size: 24px;
+    /* Adjust font size */
+    text-align: center;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content2,
+.modal-content {
+    background-color: #333333;
+    filter: opacity(75%);
+    font-size: large;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Add this line */
+}
+
+.modal-content2 {
+    width: 85%;
+    height: 85%;
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#myModal2 {
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+}
+
+.top-section,
+.bottom-section {
+    width: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box; /* Add this line */
+}
+
+.bottom-section {
+    height: 25%;
+}
+
+/* Additional styles to match forum or YouTube comments style */
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 75%;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.user {
+    color: #888;
+    font-weight: bold;
+}
+
+.text {
+    color: #ffffff;
+}
+
+.post-header {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.posted-by {
+    color: red; /* Red text color */
+}
+
+.code-message {
+    color: red; /* Red text color */
+    font-weight: bold;
+}
+
+.top-section h3 {
+    left: 50px;
+    position: relative;
+}
+
+.story {
+    width: 75%;
+    margin: auto;
+}

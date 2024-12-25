@@ -1,175 +1,102 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    /* Hide scrollbars */
-    background-image: url("/media/images/bg.png");
-    /* Set background image */
-    background-size: cover;
-    /* Ensure background covers the entire viewport */
-    background-position: center;
-    /* Center the background image */
+    font-family: 'Arial', sans-serif;
+    background-image: url('bg.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh; /* Ensure body covers at least the full height of the viewport */
+    margin: 0; /* Remove default margin */
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    /* Text color */
-    font-family: Arial, sans-serif;
-    /* Specify font family */
+    position: relative; /* Set position to relative to position the overlay */
 }
 
-/* Apply the "480p" effect to all elements except the overlay */
-body>*:not(#gif-overlay) {
-    filter: blur(1.5px);
+/* Create the overlay */
+body::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the top */
+    left: 0; /* Cover the left */
+    right: 0; /* Cover the right */
+    bottom: 0; /* Cover the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Make sure overlay is above the background */
 }
 
-#gif-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 9999;
-    /* Ensure it's on top of everything */
-    pointer-events: none;
-    /* Allow interaction with elements behind */
+#cards-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center the cards */
+    
+    max-width: 1200px; /* Optional: Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+    position: absolute; /* Positioning context for children */
+    z-index: 2; /* Ensure content is above the overlay */
 }
 
-
-#coming-soon-text,
-#horizontal-line,
-#countdown-text {
-    filter: none;
-    /* Remove the filter for these elements */
+.download-card {
+width: 300px;
+height: 50px;
+background: linear-gradient(145deg, #f4e4ff, #f9d0e4);
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+padding: 10px;
+display: flex;
+flex-direction: column;
+margin: 10px;
+position: relative;
 }
 
-#coming-soon-text {
-    font-size: 36px;
-    /* Adjust font size */
-    text-align: center;
+.card-content {
+display: flex;
+align-items: center;
+flex-grow: 1;
 }
 
-#horizontal-line {
-    width: 25%;
-    /* Adjust line width */
-    border-bottom: 1px solid white;
-    /* Horizontal line style */
-    margin: 20px 0;
-    /* Adjust margin */
+.download-card img {
+width: 50px;
+height: 50px;
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#countdown-text {
-    font-size: 24px;
-    /* Adjust font size */
-    text-align: center;
+.info {
+margin-left: 15px;
+flex-grow: 1;
 }
 
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 5000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
+.download-title {
+font-size: 16px;
+font-weight: bold;
+color: #333;
+text-align: left;
 }
 
-.modal-content2,
-.modal-content {
-    background-color: #333333;
-    filter: opacity(75%);
-    font-size: large;
-    padding: 20px;
-    border: 1px solid #888;
-    max-width: 100%;
-    text-align: center;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; /* Add this line */
+.download-version {
+font-size: 14px;
+color: #666;
 }
 
-.modal-content2 {
-    width: 85%;
-    height: 85%;
-    text-align: left;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-#myModal2 {
-    display: none;
-}
-
-.close {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000000;
-    cursor: pointer;
-}
-
-.top-section,
-.bottom-section {
-    width: 100%;
-    border: 1px solid #333;
-    box-sizing: border-box; /* Add this line */
-}
-
-.bottom-section {
-    height: 25%;
-}
-
-/* Additional styles to match forum or YouTube comments style */
-.comment {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+.download-btn {
+    background-color: #ff80c0;
+    color: white;
+    border: none;
+    padding: 2px 12px;
+    width: 50px;
     border-radius: 5px;
-    width: 75%;
-    margin-bottom: 10px;
-    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for background and transform */
 }
 
-.user {
-    color: #888;
-    font-weight: bold;
-}
-
-.text {
-    color: #ffffff;
-}
-
-.post-header {
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.posted-by {
-    color: red; /* Red text color */
-}
-
-.code-message {
-    color: red; /* Red text color */
-    font-weight: bold;
-}
-
-.top-section h3 {
-    left: 50px;
-    position: relative;
-}
-
-.story {
-    width: 75%;
-    margin: auto;
+.download-btn:hover {
+    background-color: #ff56a5;
+    transform: scale(1.1); /* Scale the button up to 1.1 times its size */
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>fsForward</title>
+</head>
+
+<body>
+    <div id="coming-soon-text">Weird...</div>
+    <div id="horizontal-line"></div>
+    <div id="countdown-text">You found this on your own?</div>
+    <img id="gif-overlay" src="/media/videos/GS.gif" alt="Overlay GIF">
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>I would recommend you to leave</p>
+            <button onclick="playAudio()">Ok</button>
+        </div>
+    </div>
+
+    <!-- Additional Modal -->
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal2()">&times;</span>
+            <div class="top-section">
+                <div class="post-header">
+                    <div class="posted-by">사라 환</div>
+                </div>
+                <h3>You won't understand</h3>
+                <p class="story">
+                </p>
+            </div>
+            <div class="bottom-section">
+                <h3>Comments</h3>
+                <div class="comment">
+                    <div class="user" style="color: red;">사라 환</div>
+                    <div class="text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="background-audio" loop>
+        <source src="/media/audio/ambience.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal2");
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Function to display the second modal
+        function displayModal2() {
+            modal2.style.display = "flex";
+        }
+
+        // Function to close the second modal
+        function closeModal2() {
+            modal2.style.display = "none";
+        }
+
+        // Function to play the audio
+        function playAudio() {
+            closeModal(); // Close the modal
+            var audio = document.getElementById('background-audio');
+            audio.volume = 0.5; // Set the volume to 30%
+            audio.play(); // Play the audio
+        }
+
+        // Event listener for key combination CTRL + ALT + F
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.altKey && event.key === 'f' && modal.style.display === "none") {
+                displayModal2(); // Display second modal
+            }
+        });
+
+        // Track the number of taps on the screen
+        var tapCount = 0;
+        var lastTapTime = 0;
+
+        // Function to handle touch events
+        function handleTouchStart(event) {
+            // Check if it's a three-finger tap
+            if (event.touches.length === 3) {
+                var now = new Date().getTime();
+                var timeDiff = now - lastTapTime;
+                lastTapTime = now;
+
+                if (timeDiff < 600) { // If the time between taps is less than 600 milliseconds
+                    tapCount++;
+                    if (tapCount === 2 && modal.style.display === "none") { // If it's the second tap
+                        displayModal2(); // Display second modal
+                        tapCount = 0; // Reset tap count
+                    }
+                } else {
+                    tapCount = 1; // Reset tap count to 1
+                }
+            }
+        }
+
+        // Add touch event listener
+        document.addEventListener('touchstart', handleTouchStart, false);
+    </script>
+
+</body>
+
+</html>
